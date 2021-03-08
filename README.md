@@ -7,6 +7,15 @@ In addition, the website must advertise the recycling services offered by Waste 
 ## UX
 
 ### User stories
+* As a potential customer, I would like the user experience on the website to be intuitive.
+
+* As a potential customer, I want to learn about polystyrene compactors and how they work.
+
+* As a potential customer, I want to be able to compare polystyrene compactor models and assess which one would be the most suitable for my needs.
+
+* As a potential customer, I want to see a professional user interface that will allow me to be confident in my purchasing decision.
+
+* As a potential customer, I want to learn about the services provided by Waste Matters.
 
 ### Strategy
 __Goal__:
