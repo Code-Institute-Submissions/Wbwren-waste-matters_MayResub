@@ -41,6 +41,8 @@ __Goal__:
 
 
 ### Functionality test
+Error: textures were not appearing on matter.js shapes
+Fix: disable render wireframes
 
 ## Deployment to Github Pages
 
@@ -48,3 +50,4 @@ __Goal__:
 
 ## Credits
 ### Acknowledgments
+styrofoam texture: https://3dtextures.me/2019/03/21/styrofoam-001/

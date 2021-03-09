@@ -28,13 +28,24 @@ let compactor = Bodies.circle(340, 400, 100, {
     friction: 0.01,
     render: {
         sprite: {
-        texture: "assets/images/prwm370.png" // set texture here
+            texture: "assets/images/prwm370.png" // sets the texture as the polystyrene compactor image
         }
     }
 })
 
+let polystyrene = Bodies.rectangle(400, 100, 80, 80, {
+    render: {
+        sprite: {
+            texture: "assets/images/polystyrene.jpg", // gives shape the texture of polystyrene
+            xScale: .1,
+            yScale: .1
+        }
+    }
+})
+
+
 // add all of the bodies to the world
-World.add(engine.world, [ground, compactor]);
+World.add(engine.world, [ground, compactor, polystyrene]);
 
 // run the engine
 Engine.run(engine);
