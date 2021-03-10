@@ -33,16 +33,37 @@ let compactor = Bodies.circle(340, 400, 100, {
     }
 })
 
-let polystyrene = Bodies.rectangle(400, 100, 80, 80, {
-    render: {
-        sprite: {
-            texture: "assets/images/polystyrene.jpg", // gives shape the texture of polystyrene
-            xScale: .1,
-            yScale: .1
-        }
-    }
-})
 
+let polystyrene = Bodies.rectangle(400, 400, 50, 50, {
+		isStatic: false,
+		density: 0.1,
+		restitution: 0,
+		friction: 0.1,
+		frictionAir: 0.01,
+		frictionStatic: 0.5,
+
+        render: {
+            sprite: {
+                texture: "assets/images/polystyrene.jpg",
+                xScale: .05,
+                yScale: .05
+            }
+        },
+		collisionFilter: {
+			group: 0,
+			category: 1,
+			mask: 255
+		},
+		fixtures: [
+			{
+				label: "",
+				isSensor: false,
+				vertices: [
+					[ { x:1026, y:1026 }, { x:1025, y:0 }, { x:2, y:0 }, { x:2, y:1025 } ]
+				]
+			}
+		]
+	})
 
 // add all of the bodies to the world
 World.add(engine.world, [ground, compactor, polystyrene]);
