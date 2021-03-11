@@ -112,49 +112,49 @@ let mouse = Mouse.create(render.canvas),
 let structure1 = Bodies.rectangle(400, 470, 40, 40, {
 	isStatic: true,
 	render: {
-		visible: true
+		visible: false
 	}
 })
 
 let structure2 = Bodies.rectangle(420, 531.5, 400, 40, {
 	isStatic: true,
 	render: {
-		visible: true
+		visible: false
 	}
 })
 
 let structure3 = Bodies.trapezoid(227, 537.5, 100, 40, .9, {
 	isStatic: true,
 	render: {
-		visible: true
+		visible: false
 	}
 })
 
 let structure4 = Bodies.rectangle(427, 417, 10, 100, {
 	isStatic: true,
 	render: {
-		visible: true
+		visible: false
 	}
 })
 
 let structure5 = Bodies.rectangle(546, 417, 10, 100, {
 	isStatic: true,
 	render: {
-		visible: true
+		visible: false
 	}
 })
 
 let structure6 = Bodies.rectangle(570, 453, 50, 105, {
 	isStatic: true,
 	render: {
-		visible: true
+		visible: false
 	}
 })
 
 let structure7 = Bodies.rectangle(540, 483, 10, 60, {
 	isStatic: true,
 	render: {
-		visible: true
+		visible: false
 	},
 })
 Matter.Body.rotate(structure7, .5);
@@ -162,7 +162,7 @@ Matter.Body.rotate(structure7, .5);
 let structure8 = Bodies.rectangle(440, 483, 10, 60, {
 	isStatic: true,
 	render: {
-		visible: true
+		visible: false
 	},
 })
 Matter.Body.rotate(structure8, -.5);
