@@ -98,8 +98,19 @@ let polystyrene = Bodies.rectangle(400, 400, 50, 50, {
 		]
 	})
 
+let mouse = Mouse.create(render.canvas),
+	mouseConstraint = MouseConstraint.create(engine, {
+		mouse: mouse,
+		constraint: {
+			stiffness: 0.2,
+			render: {
+				visible: true
+			}
+		}
+	});
+
 // add all of the bodies to the world
-World.add(engine.world, [ground, compactor, polystyrene]);
+World.add(engine.world, [ground, compactor, polystyrene, mouseConstraint]);
 
 // run the engine
 Engine.run(engine);
