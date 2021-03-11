@@ -44,6 +44,11 @@ __Goal__:
 Error: textures were not appearing on matter.js shapes
 Fix: disable render wireframes
 
+
+Problem: Couldn't get polystyrene blocks to appear behind the compactor image in the canvas (3D effect)
+Fix: The order in which you add objects to the world determines the z-index. Adding the foreground image 
+of the compactor after the polystyrene blocks allows the blocks to appear behind the image, giving the desired 3D effect.
+
 ## Deployment to Github Pages
 
 ## Clone

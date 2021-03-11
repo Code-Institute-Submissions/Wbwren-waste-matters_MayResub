@@ -167,8 +167,20 @@ let structure8 = Bodies.rectangle(440, 483, 10, 60, {
 })
 Matter.Body.rotate(structure8, -.5);
 
+let compactorForeground = Bodies.rectangle(400, 511, .01, .01, {
+	isStatic: true,
+	render: {
+		visible: true,
+		sprite: {
+			texture: "assets/images/prwm370-cropped.png",
+			xScale: .75,
+			yScale: .75
+		}
+	},
+})
+
 // add all of the bodies to the world
-World.add(engine.world, [ground, compactor, polystyrene, mouseConstraint, structure1, structure2, structure3, structure4, structure5, structure6, structure7, structure8]);
+World.add(engine.world, [ground, compactor, polystyrene, mouseConstraint, structure1, structure2, structure3, structure4, structure5, structure6, structure7, structure8, compactorForeground]);
 
 // run the engine
 Engine.run(engine);
