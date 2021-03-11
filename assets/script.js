@@ -22,8 +22,8 @@ let render = Render.create({
 let ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
 
 // add polystyrene compactor object to the canvas
-let compactor = Bodies.rectangle(340, 200, 100, 100, {
-		isStatic: false,
+let compactor = Bodies.rectangle(400, 450, 100, 100, {
+		isStatic: true,
 		density: 0.1,
 		restitution: 0,
 		friction: 0.1,
