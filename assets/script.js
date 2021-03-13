@@ -66,6 +66,18 @@ let compactor = Bodies.rectangle(400, 450, .01, .01, {
 		]
 	})
 
+let greenPipe = Bodies.rectangle(200, 100, .01, .01, {
+	isStatic: true,
+	render: {
+		visible: true,
+		sprite: {
+			texture: "assets/images/green-pipe.png",
+			xScale: .3,
+			yScale: .3
+		}
+	},
+})
+
 // function to generate random sized polystyrene blocks
 $("#world").click(function() {
 	// generate a random number for the length and width of the polystyrene blocks
@@ -111,7 +123,7 @@ $("#world").click(function() {
 			}
 		]
 	})
-	World.add(engine.world, [polystyreneBox, compactorForeground]);
+	World.add(engine.world, [polystyreneBox, compactorForeground, greenPipe]);
 })
 	
 
@@ -198,7 +210,7 @@ let compactorForeground = Bodies.rectangle(400, 511, .01, .01, {
 })
 
 // add all of the bodies to the world
-World.add(engine.world, [ground, compactor, mouseConstraint, structure1, structure2, structure3, structure4, structure5, structure6, structure7, structure8]);
+World.add(engine.world, [ground, compactor, mouseConstraint, structure1, structure2, structure3, structure4, structure5, structure6, structure7, structure8, greenPipe]);
 
 // run the engine
 Engine.run(engine);
