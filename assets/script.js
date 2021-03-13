@@ -85,7 +85,7 @@ $("#world").click(function() {
 	let randomLengthValue = Math.floor((Math.random()*50) + 10);
 
 	// generate a random number for the coordinates in which the block will be created
-	let randomXAxisValue = Math.floor((Math.random()*100) + 200);
+	let randomXAxisValue = Math.floor((Math.random()*100) + 150);
 	let randomYAxisValue = Math.floor((Math.random()*100) + 200);
 
 
