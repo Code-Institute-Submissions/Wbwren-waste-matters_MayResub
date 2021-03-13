@@ -65,9 +65,24 @@ let compactor = Bodies.rectangle(400, 450, .01, .01, {
 			}
 		]
 	})
-// use math random for dimensions withing a certain limit. Limit user clicks.
+
+// function to generate random sized polystyrene blocks
 $("#world").click(function() {
-	let polystyreneBox = Bodies.rectangle(400, 400, 50, 50, {
+	// generate a random number for the length and width of the polystyrene blocks
+	let randomWidthValue = Math.floor((Math.random()*100) + 10); // a value of 10 is added to the number to ensure the blocks are large enough to click easily
+	let randomLengthValue = Math.floor((Math.random()*50) + 10);
+
+	// generate a random number for the coordinates in which the block will be created
+	let randomXAxisValue = Math.floor((Math.random()*100) + 200);
+	let randomYAxisValue = Math.floor((Math.random()*100) + 200);
+
+
+	// the image overlay of the polystyrene blocks needs to be scaled down to the size of the block created, the ratio is 1:1000
+	let xAxisImageScaleValue = randomWidthValue/1000;
+	let yAxisImageScaleValue = randomLengthValue/1000;
+	console.log(randomXAxisValue + "x", randomYAxisValue + "y")
+
+	let polystyreneBox = Bodies.rectangle(randomXAxisValue, randomYAxisValue, randomWidthValue, randomLengthValue, {
 		isStatic: false,
 		density: 0.1,
 		restitution: 0,
@@ -78,8 +93,8 @@ $("#world").click(function() {
         render: {
             sprite: {
                 texture: "assets/images/polystyrene.jpg",
-                xScale: .05,
-                yScale: .05
+                xScale: xAxisImageScaleValue,
+                yScale: yAxisImageScaleValue
             }
         },
 		collisionFilter: {
