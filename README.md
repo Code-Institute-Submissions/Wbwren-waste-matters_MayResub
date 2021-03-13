@@ -49,6 +49,9 @@ Problem: Couldn't get polystyrene blocks to appear behind the compactor image in
 Fix: The order in which you add objects to the world determines the z-index. Adding the foreground image 
 of the compactor after the polystyrene blocks allows the blocks to appear behind the image, giving the desired 3D effect.
 
+Problem: when user creates a polystyrene block, they appear in-front of the images, giving no 3D effect.
+Fix: use add to world method within the polystyrene creation function and re-add the images on each call.
+
 ## Deployment to Github Pages
 
 ## Clone
