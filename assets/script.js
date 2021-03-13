@@ -65,9 +65,9 @@ let compactor = Bodies.rectangle(400, 450, .01, .01, {
 			}
 		]
 	})
-
-
-let polystyrene = Bodies.rectangle(400, 400, 50, 50, {
+// use math random for dimensions withing a certain limit. Limit user clicks.
+$("#world").click(function() {
+	let polystyreneBox = Bodies.rectangle(400, 400, 50, 50, {
 		isStatic: false,
 		density: 0.1,
 		restitution: 0,
@@ -89,7 +89,6 @@ let polystyrene = Bodies.rectangle(400, 400, 50, 50, {
 		},
 		fixtures: [
 			{
-				label: "",
 				isSensor: false,
 				vertices: [
 					[ { x:1026, y:1026 }, { x:1025, y:0 }, { x:2, y:0 }, { x:2, y:1025 } ]
@@ -97,6 +96,10 @@ let polystyrene = Bodies.rectangle(400, 400, 50, 50, {
 			}
 		]
 	})
+	World.add(engine.world, [polystyreneBox, compactorForeground]);
+})
+	
+
 
 let mouse = Mouse.create(render.canvas),
 	mouseConstraint = MouseConstraint.create(engine, {
@@ -180,7 +183,7 @@ let compactorForeground = Bodies.rectangle(400, 511, .01, .01, {
 })
 
 // add all of the bodies to the world
-World.add(engine.world, [ground, compactor, polystyrene, mouseConstraint, structure1, structure2, structure3, structure4, structure5, structure6, structure7, structure8, compactorForeground]);
+World.add(engine.world, [ground, compactor, mouseConstraint, structure1, structure2, structure3, structure4, structure5, structure6, structure7, structure8]);
 
 // run the engine
 Engine.run(engine);
