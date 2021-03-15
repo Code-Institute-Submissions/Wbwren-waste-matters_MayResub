@@ -1,7 +1,25 @@
-#spawnBtn {
+canvas {
+    margin-right: auto;
+}
+
+img {
+    max-height: 48px;
     display: inline-block;
+    margin: 0;
+}
+
+#buttons {
+    position: relative;
+    display: block;
+    margin: 0;
+}
+
+#spawnBtn {
+    position: absolute;
+    
 }
 
 #resetBtn {
-    display: inline-block;
+    position: absolute;
+    right: 1%
 }

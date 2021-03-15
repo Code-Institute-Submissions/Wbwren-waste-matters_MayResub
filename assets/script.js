@@ -81,7 +81,7 @@ let greenPipe = Bodies.rectangle(200, 100, .01, .01, {
 let polystyreneBoxes = []
 
 // function to generate random sized polystyrene blocks
-$("#world").click(function() {
+$("#spawnBtn").click(function() {
 	// generate a random number for the length and width of the polystyrene blocks
 	let randomWidthValue = Math.floor((Math.random()*50) + 10); // a value of 10 is added to the number to ensure the blocks are large enough to click easily
 	let randomLengthValue = Math.floor((Math.random()*100) + 10);
