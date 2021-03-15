@@ -103,7 +103,7 @@ $("#spawnBtn").click(function() {
 
         render: {
             sprite: {
-                texture: "assets/images/polystyrene.jpg",
+                texture: "assets/images/polystyrene.png",
                 xScale: xAxisImageScaleValue,
                 yScale: yAxisImageScaleValue
             }
@@ -212,6 +212,8 @@ let compactorForeground = Bodies.rectangle(400, 511, .01, .01, {
 		}
 	},
 })
+
+
 
 // add all of the bodies to the world
 World.add(engine.world, [ground, compactor, mouseConstraint, structure1, structure2, structure3, structure4, structure5, structure6, structure7, structure8, greenPipe]);
