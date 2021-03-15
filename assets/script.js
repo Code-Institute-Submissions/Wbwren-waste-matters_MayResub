@@ -83,20 +83,17 @@ let polystyreneBoxes = []
 // function to generate random sized polystyrene blocks
 $("#world").click(function() {
 	// generate a random number for the length and width of the polystyrene blocks
-	let randomWidthValue = Math.floor((Math.random()*100) + 10); // a value of 10 is added to the number to ensure the blocks are large enough to click easily
-	let randomLengthValue = Math.floor((Math.random()*50) + 10);
+	let randomWidthValue = Math.floor((Math.random()*50) + 10); // a value of 10 is added to the number to ensure the blocks are large enough to click easily
+	let randomLengthValue = Math.floor((Math.random()*100) + 10);
 
-	// generate a random number for the coordinates in which the block will be created
+	// generate a random number for the x-axis coordinate in which the block will be created
 	let randomXAxisValue = Math.floor((Math.random()*100) + 150);
-	let randomYAxisValue = Math.floor((Math.random()*100) + 200);
-
 
 	// the image overlay of the polystyrene blocks needs to be scaled down to the size of the block created, the ratio is 1:1000
 	let xAxisImageScaleValue = randomWidthValue/1000;
 	let yAxisImageScaleValue = randomLengthValue/1000;
-	console.log(randomXAxisValue + "x", randomYAxisValue + "y")
 
-	let polystyreneBox = Bodies.rectangle(randomXAxisValue, randomYAxisValue, randomWidthValue, randomLengthValue, {
+	let polystyreneBox = Bodies.rectangle(randomXAxisValue, 100, randomWidthValue, randomLengthValue, {
 		isStatic: false,
 		density: 0.1,
 		restitution: 0,
