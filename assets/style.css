@@ -1,9 +1,18 @@
+body {
+    position: relative;
+}
+
 canvas {
-    margin-right: auto;
+    width: 100vw;
+    max-width: 120vh;
+    max-height: 100vh;
+    display: block;
+    margin: auto;
+    border: solid 20px #ff0000;
 }
 
 img {
-    max-height: 48px;
+    max-height: 5vw;
     display: inline-block;
     margin: 0;
 }
