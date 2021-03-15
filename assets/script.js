@@ -78,6 +78,8 @@ let greenPipe = Bodies.rectangle(200, 100, .01, .01, {
 	},
 })
 
+let polystyreneBoxes = []
+
 // function to generate random sized polystyrene blocks
 $("#world").click(function() {
 	// generate a random number for the length and width of the polystyrene blocks
@@ -124,9 +126,14 @@ $("#world").click(function() {
 		]
 	})
 	World.add(engine.world, [polystyreneBox, compactorForeground, greenPipe]);
+	polystyreneBoxes.push(polystyreneBox)
+	console.log(polystyreneBoxes)
 })
-	
-
+$('#resetBtn').on('click', function(){
+	for (polystyreneBox in polystyreneBoxes) {
+		World.remove(engine.world, polystyreneBoxes[polystyreneBox]);
+	}
+})
 
 let mouse = Mouse.create(render.canvas),
 	mouseConstraint = MouseConstraint.create(engine, {
