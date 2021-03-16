@@ -59,3 +59,6 @@ Fix: use add to world method within the polystyrene creation function and re-add
 ## Credits
 ### Acknowledgments
 styrofoam texture: https://3dtextures.me/2019/03/21/styrofoam-001/
+speech bubble: http://clipart-library.com/clipart/6TroXbg6c.html
+reset image: https://www.vhv.rs/viewpic/TRxihx_8-bit-restart-button-hd-png-download/
+p button image: https://www.pngkey.com/detail/u2w7q8e6y3e6a9a9_pow-button-mario-pixel-art-mario-christmas-pixel/

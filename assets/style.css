@@ -8,7 +8,7 @@ canvas {
     max-height: 100vh;
     display: block;
     margin: auto;
-    border: solid 20px #ff0000;
+    border: solid .5vh #ff0000;
 }
 
 img {
@@ -31,4 +31,22 @@ img {
 #resetBtn {
     position: absolute;
     right: 1%
+}
+
+#messageContainer {
+    display: inline-block;
+    position: fixed;
+    right: 25%;
+    top: 3rem;
+    text-align: center;
+
+    color: aliceblue;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+p {
+    font-size: 1vw;
 }
