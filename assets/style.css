@@ -1,5 +1,9 @@
-body {
+#wrapper {
     position: relative;
+    width: inherit;
+    max-width: 120vh;
+    max-height: 100vh;
+    margin: auto;
 }
 
 canvas {
@@ -35,12 +39,14 @@ img {
 
 #messageContainer {
     display: inline-block;
-    position: fixed;
-    right: 25%;
-    top: 3rem;
+    position: absolute;
+    right: 15vw;
+    margin: center;
+    top: 10vh;
     text-align: center;
+    max-width: 20vw;
 
-    color: aliceblue;
+    color: #f0f8ff;
 }
 
 h2 {
