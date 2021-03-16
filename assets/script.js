@@ -124,6 +124,7 @@ $("#spawnBtn").click(function() {
 		]
 	})
 	World.add(engine.world, [polystyreneBox, compactorForeground, greenPipe]);
+	World.remove(engine.world, [greenPipe])
 	polystyreneBoxes.push(polystyreneBox)
 	console.log(polystyreneBoxes)
 })
