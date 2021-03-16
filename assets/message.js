@@ -1,4 +1,4 @@
-function displayIntroInfo () {
+$('#spawnBtn').on('click', function() {
     $('#messageContainer').html(
         `
         <h2>Did you know?</h2>
@@ -6,6 +6,4 @@ function displayIntroInfo () {
         so even a small quantity of polystyrene can rapidly fill a bin or container.</p>
         `
     )
-}
-
-displayIntroInfo ()
+})

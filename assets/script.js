@@ -79,6 +79,7 @@ let greenPipe = Bodies.rectangle(200, 100, .01, .01, {
 })
 
 let polystyreneBoxes = []
+let polystyreneBox;
 
 // function to generate random sized polystyrene blocks
 $("#spawnBtn").click(function() {
@@ -93,7 +94,7 @@ $("#spawnBtn").click(function() {
 	let xAxisImageScaleValue = randomWidthValue/1000;
 	let yAxisImageScaleValue = randomLengthValue/1000;
 
-	let polystyreneBox = Bodies.rectangle(randomXAxisValue, 100, randomWidthValue, randomLengthValue, {
+	polystyreneBox = Bodies.rectangle(randomXAxisValue, 100, randomWidthValue, randomLengthValue, {
 		isStatic: false,
 		density: 0.1,
 		restitution: 0,
@@ -126,6 +127,9 @@ $("#spawnBtn").click(function() {
 	polystyreneBoxes.push(polystyreneBox)
 	console.log(polystyreneBoxes)
 })
+
+
+
 $('#resetBtn').on('click', function(){
 	for (polystyreneBox in polystyreneBoxes) {
 		World.remove(engine.world, polystyreneBoxes[polystyreneBox]);
