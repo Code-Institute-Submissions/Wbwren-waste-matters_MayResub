@@ -64,6 +64,12 @@ images, giving no 3D effect.
 Fix: use add to world method within the polystyrene creation function and re-add
 the images on each call.
 
+Problem: on screen messages were interfering with the mouse drag function
+![alt text](assets\images\mouse-drag-bug.png)
+
+Fix: add a style attribute of 'pointer-events: none;' to the message div.s
+![alt text](assets\images\mouse-drag-bug-fix.png)
+
 ## Deployment to Github Pages
 
 ## Clone
