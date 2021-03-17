@@ -64,11 +64,11 @@ images, giving no 3D effect.
 Fix: use add to world method within the polystyrene creation function and re-add
 the images on each call.
 
-Problem: on screen messages were interfering with the mouse drag function
-![alt text](assets\images\mouse-drag-bug.png)
+Problem: on-screen messages were interfering with the mouse drag function
+* [Image of mouse drag bug](https://github.com/Wbwren/waste-matters/blob/master/assets/images/mouse-drag-bug.png)
 
-Fix: add a style attribute of 'pointer-events: none;' to the message div.s
-![alt text](assets\images\mouse-drag-bug-fix.png)
+Fix: add a style attribute of 'pointer-events: none;' to the message div
+* [Image of mouse drag bug fix](https://github.com/Wbwren/waste-matters/blob/master/assets/images/mouse-drag-bug-fix.png)
 
 ## Deployment to Github Pages
 
