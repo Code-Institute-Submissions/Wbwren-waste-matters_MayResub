@@ -356,9 +356,14 @@ let compactedPolystyrene = Bodies.rectangle(320, 490, 150, 15, {
 // Function to turn on compactor
 $('#compact').on('click', function () {
 	World.remove(engine.world, [
-		groundCenter, trapDoorComponent, rightTrapDoor, leftTrapDoor
+		groundCenter, trapDoorComponent, rightTrapDoor, leftTrapDoor,
+		mouseConstraint
 	]);
+
 	Body.setVelocity(compactedPolystyrene, { x: -2.7, y: 0 });
+
+	$('#spawnBtn').css('pointer-events', 'none');
+	$('#compact').css('pointer-events', 'none');
 })
 
 // Add all of the bodies to the world
