@@ -19,10 +19,100 @@ let render = Render.create({
 });
 
 // create the ground
-let ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
+let groundLeft = Bodies.rectangle(208, 570, 415, 60, { isStatic: true });
+let groundCenter = Bodies.rectangle(490, 570, 100, 60, { isStatic: true });
+let groundRight = Bodies.rectangle(670, 570, 260, 60, { isStatic: true });
+
+let brick = Bodies.rectangle(50, 588, 0.01, 0.01, { 
+	isStatic: true,
+	render: {
+		sprite: {
+			texture: "assets/images/brick.png",
+			xScale: .11,
+			yScale: .11
+		}
+}
+});
+
+let brick1 = Bodies.rectangle(150, 588, 0.01, 0.01, { 
+	isStatic: true,
+	render: {
+		sprite: {
+			texture: "assets/images/brick.png",
+			xScale: .11,
+			yScale: .11
+		}
+}
+});
+
+let brick2 = Bodies.rectangle(250, 588, 0.01, 0.01, { 
+	isStatic: true,
+	render: {
+		sprite: {
+			texture: "assets/images/brick.png",
+			xScale: .11,
+			yScale: .11
+		}
+}
+});
+
+let brick3 = Bodies.rectangle(350, 588, 0.01, 0.01, { 
+	isStatic: true,
+	render: {
+		sprite: {
+			texture: "assets/images/brick.png",
+			xScale: .11,
+			yScale: .11
+		}
+}
+});
+
+let brick4 = Bodies.rectangle(450, 588, 0.01, 0.01, { 
+	isStatic: true,
+	render: {
+		sprite: {
+			texture: "assets/images/brick.png",
+			xScale: .11,
+			yScale: .11
+		}
+}
+});
+
+let brick5 = Bodies.rectangle(550, 588, 0.01, 0.01, { 
+	isStatic: true,
+	render: {
+		sprite: {
+			texture: "assets/images/brick.png",
+			xScale: .11,
+			yScale: .11
+		}
+}
+});
+
+let brick6 = Bodies.rectangle(650, 588, 0.01, 0.01, { 
+	isStatic: true,
+	render: {
+		sprite: {
+			texture: "assets/images/brick.png",
+			xScale: .11,
+			yScale: .11
+		}
+}
+});
+
+let brick7 = Bodies.rectangle(750, 588, 0.01, 0.01, { 
+	isStatic: true,
+	render: {
+		sprite: {
+			texture: "assets/images/brick.png",
+			xScale: .11,
+			yScale: .11
+		}
+}
+});
 
 // add polystyrene compactor object to the canvas
-let compactor = Bodies.rectangle(400, 450, .01, .01, {
+let compactor = Bodies.rectangle(400, 410, .01, .01, {
 		isStatic: true,
 		density: 0.1,
 		restitution: 0,
@@ -84,8 +174,8 @@ let polystyreneBox;
 // function to generate random sized polystyrene blocks
 $("#spawnBtn").click(function() {
 	// generate a random number for the length and width of the polystyrene blocks
-	let randomWidthValue = Math.floor((Math.random()*50) + 10); // a value of 10 is added to the number to ensure the blocks are large enough to click easily
-	let randomLengthValue = Math.floor((Math.random()*100) + 10);
+	let randomWidthValue = Math.floor((Math.random()*40) + 20); // a value of 10 is added to the number to ensure the blocks are large enough to click easily
+	let randomLengthValue = Math.floor((Math.random()*90) + 20);
 
 	// generate a random number for the x-axis coordinate in which the block will be created
 	let randomXAxisValue = Math.floor((Math.random()*100) + 150);
@@ -123,7 +213,7 @@ $("#spawnBtn").click(function() {
 			}
 		]
 	})
-	World.add(engine.world, [polystyreneBox, compactorForeground, greenPipe]);
+	World.add(engine.world, [polystyreneBox, compactorForeground, brick2, brick3, brick4, brick5]);
 	World.remove(engine.world, [greenPipe])
 	polystyreneBoxes.push(polystyreneBox)
 	console.log(polystyreneBoxes)
@@ -148,49 +238,63 @@ let mouse = Mouse.create(render.canvas),
 		}
 	});
 
-let structure1 = Bodies.rectangle(400, 470, 40, 40, {
+let structure1 = Bodies.rectangle(400, 430, 40, 40, {
 	isStatic: true,
 	render: {
 		visible: false
 	}
 })
 
-let structure2 = Bodies.rectangle(420, 531.5, 400, 40, {
+let structure2 = Bodies.rectangle(320, 491.5, 190, 40, {
 	isStatic: true,
 	render: {
 		visible: false
 	}
 })
 
-let structure3 = Bodies.trapezoid(227, 537.5, 100, 40, .9, {
+let structure21 = Bodies.rectangle(580, 491.5, 70, 40, {
 	isStatic: true,
 	render: {
 		visible: false
 	}
 })
 
-let structure4 = Bodies.rectangle(427, 417, 10, 100, {
+let structure22 = Bodies.rectangle(490, 491.5, 80, 40, {
 	isStatic: true,
 	render: {
 		visible: false
 	}
 })
 
-let structure5 = Bodies.rectangle(546, 417, 10, 100, {
+let structure3 = Bodies.trapezoid(227, 497.5, 100, 40, .9, {
 	isStatic: true,
 	render: {
 		visible: false
 	}
 })
 
-let structure6 = Bodies.rectangle(570, 453, 50, 105, {
+let structure4 = Bodies.rectangle(427, 377, 10, 100, {
 	isStatic: true,
 	render: {
 		visible: false
 	}
 })
 
-let structure7 = Bodies.rectangle(540, 483, 10, 60, {
+let structure5 = Bodies.rectangle(546, 377, 10, 100, {
+	isStatic: true,
+	render: {
+		visible: false
+	}
+})
+
+let structure6 = Bodies.rectangle(570, 413, 50, 105, {
+	isStatic: true,
+	render: {
+		visible: false
+	}
+})
+
+let structure7 = Bodies.rectangle(540, 443, 10, 60, {
 	isStatic: true,
 	render: {
 		visible: false
@@ -198,7 +302,7 @@ let structure7 = Bodies.rectangle(540, 483, 10, 60, {
 })
 Matter.Body.rotate(structure7, .5);
 
-let structure8 = Bodies.rectangle(440, 483, 10, 60, {
+let structure8 = Bodies.rectangle(440, 443, 10, 60, {
 	isStatic: true,
 	render: {
 		visible: false
@@ -206,7 +310,7 @@ let structure8 = Bodies.rectangle(440, 483, 10, 60, {
 })
 Matter.Body.rotate(structure8, -.5);
 
-let compactorForeground = Bodies.rectangle(400, 511, .01, .01, {
+let compactorForeground = Bodies.rectangle(400, 471, .01, .01, {
 	isStatic: true,
 	render: {
 		visible: true,
@@ -218,10 +322,12 @@ let compactorForeground = Bodies.rectangle(400, 511, .01, .01, {
 	},
 })
 
-
-
 // add all of the bodies to the world
-World.add(engine.world, [ground, compactor, mouseConstraint, structure1, structure2, structure3, structure4, structure5, structure6, structure7, structure8, greenPipe]);
+World.add(engine.world, [groundLeft, groundCenter, groundRight, compactor, 
+mouseConstraint, structure1, structure2, structure21, structure22, structure3, 
+structure4, structure5, structure6, structure7, structure8, greenPipe, brick, brick1, brick2, brick3, brick4, brick5, brick6, brick7]);
+
+
 
 // run the engine
 Engine.run(engine);
