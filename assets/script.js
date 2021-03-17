@@ -212,7 +212,7 @@ $("#spawnBtn").click(function() {
 		},
 	})
 
-	// Readd necessary components to give 3D effect
+	// Re-add necessary components to give 3D effect
 	World.add(engine.world, [
 		polystyreneBox, blackRectangle, compactorForeground, greenPipe, brick2,
 		brick3, brick4, brick5
@@ -253,7 +253,14 @@ let powerGaugeComponent = Bodies.rectangle(400, 430, 40, 40, {
 	}
 })
 
-let shaftComponent = Bodies.rectangle(320, 491.5, 190, 40, {
+let shaftUpperComponent = Bodies.trapezoid(312, 476.5, 200, 10, .1, {
+	isStatic: true,
+	render: {
+		visible: false
+	}
+})
+
+let shaftLowerComponent = Bodies.trapezoid(294, 503.5, 220, 10, .09, {
 	isStatic: true,
 	render: {
 		visible: false
@@ -261,13 +268,6 @@ let shaftComponent = Bodies.rectangle(320, 491.5, 190, 40, {
 })
 
 let engineComponent = Bodies.rectangle(580, 491.5, 70, 40, {
-	isStatic: true,
-	render: {
-		visible: false
-	}
-})
-
-let shaftExitComponent = Bodies.trapezoid(227, 497.5, 100, 40, .9, {
 	isStatic: true,
 	render: {
 		visible: false
@@ -336,18 +336,17 @@ $('#compact').on('click', function () {
 	World.remove(engine.world, [
 		groundCenter, trapDoorComponent, rightTrapDoor, leftTrapDoor
 	])
-})	
+})
 
 // Add all of the bodies to the world
 World.add(engine.world, [
 	groundLeft, groundCenter, groundRight, compactor, 
-	mouseConstraint, powerGaugeComponent, shaftComponent, engineComponent,
-	trapDoorComponent, shaftExitComponent, leftContainerComponent, 
-	rightContainerComponent, powerSwitchComponent, rightTrapDoor, leftTrapDoor,
-	greenPipe, brick0, brick1, brick2, brick3, brick4, brick5, brick6, brick7
+	mouseConstraint, powerGaugeComponent, shaftUpperComponent,
+	shaftLowerComponent, engineComponent, trapDoorComponent,
+	leftContainerComponent, rightContainerComponent, powerSwitchComponent,
+	rightTrapDoor, leftTrapDoor, greenPipe, brick0, brick1, brick2, brick3,
+	brick4, brick5, brick6, brick7
 ]);
-
-
 
 // Run the engine
 Engine.run(engine);
