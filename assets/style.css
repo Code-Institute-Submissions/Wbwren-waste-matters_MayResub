@@ -41,6 +41,13 @@ img {
     right: 1%
 }
 
+#compact {
+    position: absolute;
+    right: 50%;
+    font-size: 30px;
+    top: 20px;
+}
+
 #messageContainer {
     display: inline-block;
     position: absolute;

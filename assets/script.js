@@ -111,6 +111,17 @@ let brick7 = Bodies.rectangle(750, 588, 0.01, 0.01, {
 }
 });
 
+let blackRectangle = Bodies.rectangle(490, 800, 0.01, 0.01, { 
+	isStatic: true,
+	render: {
+		sprite: {
+			texture: "assets/images/black.png",
+			xScale: .7,
+			yScale: 2.5
+		},
+}
+});
+
 // add polystyrene compactor object to the canvas
 let compactor = Bodies.rectangle(400, 410, .01, .01, {
 		isStatic: true,
@@ -213,8 +224,8 @@ $("#spawnBtn").click(function() {
 			}
 		]
 	})
-	World.add(engine.world, [polystyreneBox, compactorForeground, brick2, brick3, brick4, brick5]);
-	World.remove(engine.world, [greenPipe])
+	World.add(engine.world, [polystyreneBox, blackRectangle, compactorForeground, greenPipe, brick2, brick3, brick4, brick5]);
+	World.remove(engine.world, [greenPipe, brick2, brick3, brick4, brick5])
 	polystyreneBoxes.push(polystyreneBox)
 	console.log(polystyreneBoxes)
 })
@@ -321,6 +332,11 @@ let compactorForeground = Bodies.rectangle(400, 471, .01, .01, {
 		}
 	},
 })
+
+// function to turn on compactor
+$('#compact').on('click', function () {
+	World.remove(engine.world, [structure22, groundCenter, structure7, structure8])
+})	
 
 // add all of the bodies to the world
 World.add(engine.world, [groundLeft, groundCenter, groundRight, compactor, 
