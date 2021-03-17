@@ -4,6 +4,8 @@ const Engine = Matter.Engine,
 	Mouse = Matter.Mouse,
     Render = Matter.Render,
     World = Matter.World,
+	Body = Matter.Body,
+	Runner = Matter.Runner,
     Bodies = Matter.Bodies;
 
 // Create an engine
@@ -18,6 +20,8 @@ const render = Render.create({
         wireframes: false, 
     }
 });
+
+let runner = Runner.create();
 
 // Create the ground
 let groundLeft = Bodies.rectangle(208, 570, 415, 60, { isStatic: true });
@@ -220,7 +224,6 @@ $("#spawnBtn").click(function() {
 
 	World.remove(engine.world, [greenPipe, brick2, brick3, brick4, brick5])
 	polystyreneBoxes.push(polystyreneBox)
-	console.log(polystyreneBoxes)
 })
 
 $('#resetBtn').on('click', function(){
@@ -331,16 +334,36 @@ let compactorForeground = Bodies.rectangle(400, 471, .01, .01, {
 	},
 })
 
+let compactedPolystyrene = Bodies.rectangle(320, 490, 150, 15, {
+	render: {
+		visible: true,
+		sprite: {
+			texture: "assets/images/polystyrene.png",
+			xScale: .146,
+			yScale: .014
+		}
+	},
+	density: .0006,
+	restitution: 0,
+	friction: .0006,
+	frictionAir: .002,
+	frictionStatic: .01,
+	isStatic: false
+	
+})
+
+
 // Function to turn on compactor
 $('#compact').on('click', function () {
 	World.remove(engine.world, [
 		groundCenter, trapDoorComponent, rightTrapDoor, leftTrapDoor
-	])
+	]);
+	Body.setVelocity(compactedPolystyrene, { x: -2.7, y: 0 });
 })
 
 // Add all of the bodies to the world
 World.add(engine.world, [
-	groundLeft, groundCenter, groundRight, compactor, 
+	groundLeft, groundCenter, groundRight, compactedPolystyrene, compactor, 
 	mouseConstraint, powerGaugeComponent, shaftUpperComponent,
 	shaftLowerComponent, engineComponent, trapDoorComponent,
 	leftContainerComponent, rightContainerComponent, powerSwitchComponent,
