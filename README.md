@@ -1,10 +1,7 @@
 # Waste Matters
 
 ## Project purpose
-Waste matters Ltd. offers waste and recycling solutions to Irish businesses. 
-The primary purpose of this website is to advertise and sell polystyrene
-compacting machines. The user will interact with the machine while receiving
-key facts about polystyrene recycling and waste matters.
+Waste matters Ltd. offers waste and recycling solutions to Irish businesses. The interactive demo aims to advertise and sell polystyrene compactors. The demo will guide the user through a mini-game in which they will drag and drop polystyrene blocks into a compactor machine before turning it on. While interacting with the demo, the user will receive key facts about polystyrene recycling and waste matters. On completion of the demo, the user will have the option to ‘learn more’ which will lead them to the current waste matters website.
 
 ## UX
 
