@@ -49,8 +49,8 @@ img {
     right: 0;
     text-align: left;
     max-width: 20vw;
-    pointer-events: none;
     color: #f0f8ff;
+    pointer-events: none;
     font-size: 1vw;
 }
 
@@ -60,6 +60,20 @@ ul {
 
 h2 {
     font-size: 2vw;
+}
+
+a {
+    background-color: #ff0000;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 20px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ff0000;
+    background-color: #ffffff;
 }
 
 @media only screen and (max-width: 320px) {
@@ -103,6 +117,15 @@ h2 {
 
     #messageContainer {
         top: 60vh;
+        margin: auto;
+        left: 0;
+        right: 0;
+        font-size: 3vw;
+        max-width: 60vw;
+    }
+
+    #wasteMattersLink {
+        top: 80vh;
         margin: auto;
         left: 0;
         right: 0;

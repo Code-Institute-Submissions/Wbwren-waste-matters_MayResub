@@ -38,7 +38,10 @@ function benefitsMessage () {
             
             <li>Reduce costs</li>
         </ul>
+        <br>
+        <a href="https://wastematters.ie/polystyrene-recycling-equipment"
+        target="_blank">Learn more</a>
         `
-    )
+    ).css('pointer-events', 'all')
 }
 
