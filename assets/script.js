@@ -362,7 +362,6 @@ $('#compactBtn').on('click', function () {
 
 	$('#spawnBtn').css('pointer-events', 'none');
 	$('#compactBtn').css('pointer-events', 'none');
-	$('#compactBtn').src('assets/images/lever.png');
 })
 
 // Add all of the bodies to the world

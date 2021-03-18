@@ -2,14 +2,6 @@ body {
     background-color: #14151F;
 }
 
-#wrapper {
-    position: relative;
-    width: inherit;
-    max-width: 120vh;
-    max-height: 100vh;
-    margin: auto;
-}
-
 canvas {
     width: 100vw;
     max-width: 120vh;
@@ -52,22 +44,22 @@ img {
 
 #messageContainer {
     display: inline-block;
-    position: absolute;
-    right: 15vw;
-    margin: center;
-    top: 10vh;
-    text-align: center;
+    position: fixed;
+    top: 1vh;
+    right: 0;
+    text-align: left;
     max-width: 20vw;
     pointer-events: none;
     color: #f0f8ff;
+    font-size: 1vw;
+}
+
+ul {
+    padding: 0;
 }
 
 h2 {
     font-size: 2vw;
-}
-
-p {
-    font-size: 1vw;
 }
 
 @media only screen and (max-width: 320px) {
@@ -107,5 +99,18 @@ p {
         height: 15vw;
         display: inline-block;
         margin: 0;
+    }
+
+    #messageContainer {
+        top: 60vh;
+        margin: auto;
+        left: 0;
+        right: 0;
+        font-size: 3vw;
+        max-width: 60vw;
+    }
+    
+    h2 {
+        font-size: 4vw;
     }
 }
