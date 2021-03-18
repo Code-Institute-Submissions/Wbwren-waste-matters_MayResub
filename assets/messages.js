@@ -9,7 +9,7 @@ function introMessage () {
         <br>
         <a onclick="next()">Next</a>
         `
-    )
+    );
 }
 
 function compactionInfo () {
@@ -24,7 +24,7 @@ function compactionInfo () {
     <br>
     <a>Drag and drop the polystyrene into the compactor</a>
     `
-    )
+    );
 }
 
 function benefitsMessage () {
@@ -46,6 +46,5 @@ function benefitsMessage () {
         <a href="https://wastematters.ie/polystyrene-recycling-equipment"
         target="_blank">Learn more</a>
         `
-    ).css('pointer-events', 'all')
+    ).css('pointer-events', 'all');
 }
-
