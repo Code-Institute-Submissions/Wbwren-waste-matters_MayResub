@@ -5,7 +5,6 @@ const Engine = Matter.Engine,
     Render = Matter.Render,
     World = Matter.World,
 	Body = Matter.Body,
-	Runner = Matter.Runner,
     Bodies = Matter.Bodies;
 
 // Create an engine
@@ -21,8 +20,6 @@ const render = Render.create({
     }
 });
 
-let runner = Runner.create();
-
 // Create the ground
 let groundLeft = Bodies.rectangle(208, 570, 415, 60, { isStatic: true });
 let groundCenter = Bodies.rectangle(490, 570, 100, 60, { isStatic: true });
@@ -34,8 +31,8 @@ let brick0 = Bodies.rectangle(50, 588, 0.01, 0.01, {
 	render: {
 		sprite: {
 			texture: "assets/images/brick.png",
-			xScale: .11,
-			yScale: .11
+			xScale: 0.11,
+			yScale: 0.11
 		}
 }
 });
@@ -45,8 +42,8 @@ let brick1 = Bodies.rectangle(150, 588, 0.01, 0.01, {
 	render: {
 		sprite: {
 			texture: "assets/images/brick.png",
-			xScale: .11,
-			yScale: .11
+			xScale: 0.11,
+			yScale: 0.11
 		}
 }
 });
@@ -56,8 +53,8 @@ let brick2 = Bodies.rectangle(250, 588, 0.01, 0.01, {
 	render: {
 		sprite: {
 			texture: "assets/images/brick.png",
-			xScale: .11,
-			yScale: .11
+			xScale: 0.11,
+			yScale: 0.11
 		}
 }
 });
@@ -67,8 +64,8 @@ let brick3 = Bodies.rectangle(350, 588, 0.01, 0.01, {
 	render: {
 		sprite: {
 			texture: "assets/images/brick.png",
-			xScale: .11,
-			yScale: .11
+			xScale: 0.11,
+			yScale: 0.11
 		}
 }
 });
@@ -78,8 +75,8 @@ let brick4 = Bodies.rectangle(450, 588, 0.01, 0.01, {
 	render: {
 		sprite: {
 			texture: "assets/images/brick.png",
-			xScale: .11,
-			yScale: .11
+			xScale: 0.11,
+			yScale: 0.11
 		}
 }
 });
@@ -89,8 +86,8 @@ let brick5 = Bodies.rectangle(550, 588, 0.01, 0.01, {
 	render: {
 		sprite: {
 			texture: "assets/images/brick.png",
-			xScale: .11,
-			yScale: .11
+			xScale: 0.11,
+			yScale: 0.11
 		}
 }
 });
@@ -100,8 +97,8 @@ let brick6 = Bodies.rectangle(650, 588, 0.01, 0.01, {
 	render: {
 		sprite: {
 			texture: "assets/images/brick.png",
-			xScale: .11,
-			yScale: .11
+			xScale: 0.11,
+			yScale: 0.11
 		}
 }
 });
@@ -111,8 +108,8 @@ let brick7 = Bodies.rectangle(750, 588, 0.01, 0.01, {
 	render: {
 		sprite: {
 			texture: "assets/images/brick.png",
-			xScale: .11,
-			yScale: .11
+			xScale: 0.11,
+			yScale: 0.11
 		}
 }
 });
@@ -126,14 +123,14 @@ let blackRectangle = Bodies.rectangle(490, 800, 0.01, 0.01, {
 	render: {
 		sprite: {
 			texture: "assets/images/black.png",
-			xScale: .7,
+			xScale: 0.7,
 			yScale: 2.5
 		},
 }
 });
 
 // Add polystyrene compactor object to the canvas
-let compactor = Bodies.rectangle(400, 410, .01, .01, {
+let compactor = Bodies.rectangle(400, 410, 0.01, 0.01, {
 		isStatic: true,
 		density: 0.1,
 		restitution: 0,
@@ -143,8 +140,8 @@ let compactor = Bodies.rectangle(400, 410, .01, .01, {
         render: {
             sprite: {
                 texture: "assets/images/prwm370.png",
-                xScale: .75,
-                yScale: .75
+                xScale: 0.75,
+                yScale: 0.75
             }
         },
 		collisionFilter: {
@@ -152,21 +149,21 @@ let compactor = Bodies.rectangle(400, 410, .01, .01, {
 			category: 1,
 			mask: 255
 		},
-	})
+	});
 
-let greenPipe = Bodies.rectangle(200, 100, .01, .01, {
+let greenPipe = Bodies.rectangle(200, 100, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		visible: true,
 		sprite: {
 			texture: "assets/images/green-pipe.png",
-			xScale: .3,
-			yScale: .3
+			xScale: 0.3,
+			yScale: 0.3
 		}
 	},
-})
+});
 
-let polystyreneBoxes = []
+let polystyreneBoxes = [];
 let polystyreneBox;
 
 // Function to generate random sized polystyrene blocks
@@ -214,7 +211,7 @@ $("#spawnBtn").click(function() {
 			category: 1,
 			mask: 255
 		},
-	})
+	});
 
 	// Re-add necessary components to give 3D effect
 	World.add(engine.world, [
@@ -222,13 +219,13 @@ $("#spawnBtn").click(function() {
 		brick3, brick4, brick5
 	]);
 
-	World.remove(engine.world, [greenPipe, brick2, brick3, brick4, brick5])
-	polystyreneBoxes.push(polystyreneBox)
-})
+	World.remove(engine.world, [greenPipe, brick2, brick3, brick4, brick5]);
+	polystyreneBoxes.push(polystyreneBox);
+});
 
 $('#resetBtn').on('click', function(){
 	window.location.reload();
-})
+});
 
 // Create mouse/click dragging function to world objects
 let mouse = Mouse.create(render.canvas),
@@ -252,103 +249,103 @@ let powerGaugeComponent = Bodies.rectangle(400, 430, 40, 40, {
 	render: {
 		visible: false
 	}
-})
+});
 
-let shaftUpperComponent = Bodies.trapezoid(312, 476.5, 200, 10, .1, {
+let shaftUpperComponent = Bodies.trapezoid(312, 476.5, 200, 10, 0.1, {
 	isStatic: true,
 	render: {
 		visible: false
 	}
-})
+});
 
-let shaftLowerComponent = Bodies.trapezoid(294, 503.5, 220, 10, .09, {
+let shaftLowerComponent = Bodies.trapezoid(294, 503.5, 220, 10, 0.09, {
 	isStatic: true,
 	render: {
 		visible: false
 	}
-})
+});
 
 let engineComponent = Bodies.rectangle(580, 491.5, 70, 40, {
 	isStatic: true,
 	render: {
 		visible: false
 	}
-})
+});
 
 let leftContainerComponent = Bodies.rectangle(427, 377, 10, 100, {
 	isStatic: true,
 	render: {
 		visible: false
 	}
-})
+});
 
 let rightContainerComponent = Bodies.rectangle(546, 377, 10, 100, {
 	isStatic: true,
 	render: {
 		visible: false
 	}
-})
+});
 
 let powerSwitchComponent = Bodies.rectangle(570, 413, 50, 105, {
 	isStatic: true,
 	render: {
 		visible: false
 	}
-})
+});
 
 let trapDoorComponent = Bodies.rectangle(490, 491.5, 80, 40, {
 	isStatic: true,
 	render: {
 		visible: false
 	}
-})
+});
 
 let rightTrapDoor = Bodies.rectangle(540, 443, 10, 60, {
 	isStatic: true,
 	render: {
 		visible: false
 	},
-})
-Matter.Body.rotate(rightTrapDoor, .5);
+});
+Matter.Body.rotate(rightTrapDoor, 0.5);
 
 let leftTrapDoor = Bodies.rectangle(440, 443, 10, 60, {
 	isStatic: true,
 	render: {
 		visible: false
 	},
-})
-Matter.Body.rotate(leftTrapDoor, -.5);
+});
+Matter.Body.rotate(leftTrapDoor, -0.5);
 
 // An additional compactor image is added to give a 3D effect
-let compactorForeground = Bodies.rectangle(400, 471, .01, .01, {
+let compactorForeground = Bodies.rectangle(400, 471, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		visible: true,
 		sprite: {
 			texture: "assets/images/prwm370-cropped.png",
-			xScale: .75,
-			yScale: .75
+			xScale: 0.75,
+			yScale: 0.75
 		}
 	},
-})
+});
 
 let compactedPolystyrene = Bodies.rectangle(320, 490, 150, 15, {
 	render: {
 		visible: true,
 		sprite: {
 			texture: "assets/images/polystyrene.png",
-			xScale: .146,
-			yScale: .014
+			xScale: 0.146,
+			yScale: 0.014
 		}
-	},
-	density: .0006,
+  },
+	density: 0.0006,
 	restitution: 0,
-	friction: .0006,
-	frictionAir: .002,
-	frictionStatic: .01,
+	friction: 0.0006,
+	frictionAir: 0.002,
+	frictionStatic: 0.01,
 	isStatic: false
 	
-})
+});
 
 // create information arrow
 let arrow = Bodies.rectangle(90, 400, 150, 150, {
@@ -356,12 +353,12 @@ let arrow = Bodies.rectangle(90, 400, 150, 150, {
 		visible: true,
 		sprite: {
 			texture: "assets/images/arrow.png",
-			xScale: .19,
-			yScale: .19
+			xScale: 0.19,
+			yScale: 0.19
 		}
 	},
 	isStatic: true
-})
+});
 
 // Function to turn on compactor
 $('#compactBtn').on('click', function () {
@@ -374,7 +371,7 @@ $('#compactBtn').on('click', function () {
 
 	$('#spawnBtn').css('pointer-events', 'none');
 	$('#compactBtn').css('pointer-events', 'none');
-})
+});
 
 // Add all of the bodies to the world
 World.add(engine.world, [
