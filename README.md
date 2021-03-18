@@ -6,20 +6,15 @@ Waste matters Ltd. offers waste and recycling solutions to Irish businesses. The
 ## UX
 
 ### User stories
-* As a potential customer, I would like the user experience on the website to be
+* As a user, I would like the user experience on the website to be
 intuitive.
 
-* As a potential customer, I want to learn about polystyrene compactors and how
+* As a user, I want to learn about polystyrene compactors and how
 they work.
 
-* As a potential customer, I want to be able to compare polystyrene compactor
-models and assess which one would be the most suitable for my needs.
+* As a user, I want to learn about polystyrene recycling in an engaging manor.
 
-* As a potential customer, I want to see a professional user interface that will
-allow me to be confident in my purchasing decision.
-
-* As a potential customer, I want to learn about the services provided by Waste
-Matters.
+* As a user, I want my experience on the website to be enjoyable.
 
 ### Strategy
 __Goal__: To inform users about polystyrene recycling in an engaging manor and sell polystyrene compactors through waste matters Ltd.
