@@ -25,7 +25,7 @@ Matters.
 __Goal__: To inform users about polystyrene recycling in an engaging manor and sell polystyrene compactors through waste matters Ltd.
 
 ### Scope
-
+* An interactive demo utilizing Matter.js, a 2D rigid body JavaScript physics engine.
 #### Colour Scheme
 
 #### Typography
