@@ -71,7 +71,7 @@ Fix: add a style attribute of 'pointer-events: none;' to the message div
 * [Image of mouse drag bug fix](https://github.com/Wbwren/waste-matters/blob/master/assets/images/mouse-drag-bug-fix.png)
 
 bug: could not get vertices to work correctly on matter.js
-* [Image of vertices bug](https://github.com/Wbwren/waste-matters/blob/master/assets/images/vertices-bug-fix.png)
+* [Image of vertices bug](https://github.com/Wbwren/waste-matters/blob/master/assets/images/vertices-bug.png)
 
 
 ## Deployment to Github Pages
