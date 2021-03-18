@@ -227,9 +227,7 @@ $("#spawnBtn").click(function() {
 })
 
 $('#resetBtn').on('click', function(){
-	for (polystyreneBox in polystyreneBoxes) {
-		World.remove(engine.world, polystyreneBoxes[polystyreneBox]);
-	}
+	window.location.reload();
 })
 
 // Create mouse/click dragging function to world objects
