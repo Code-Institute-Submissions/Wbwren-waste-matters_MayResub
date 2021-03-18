@@ -22,7 +22,7 @@ allow me to be confident in my purchasing decision.
 Matters.
 
 ### Strategy
-__Goal__:
+__Goal__: To inform users about polystyrene recycling in an engaging manor and sell polystyrene compactors through waste matters Ltd.
 
 ### Scope
 
