@@ -46,7 +46,9 @@ img {
 #compactBtn {
     position: fixed;
     bottom: 0;
-    left: 45%;
+    margin: auto;
+    left: 0;
+    right: 0;
 }
 
 #messageContainer {
@@ -67,4 +69,12 @@ h2 {
 
 p {
     font-size: 1vw;
+}
+
+@media only screen and (max-width: 320px) {
+    img {
+        max-height: 15vw;
+        display: inline-block;
+        margin: 0;
+    }
 }
