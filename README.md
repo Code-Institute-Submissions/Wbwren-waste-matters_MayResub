@@ -24,7 +24,8 @@ __Goal__: To inform users about polystyrene recycling in an engaging manor and s
 #### Colour Scheme
 
 #### Typography
-
+Roboto Mono is the font used on the webpage with monospace as the fallback font in the case of the default font failing to load correctly.
+The default font weight of 400 is used throughout the page.
 #### Imagery
 
 ### Wireframes
