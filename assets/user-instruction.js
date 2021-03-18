@@ -5,7 +5,7 @@ function fadeInFadeOut() {
 }
     
 function next() {
-    $('#spawnBtnArrow').css('display', 'inline-block')
+    $('#spawnBtnArrow').css('display', 'inline-block');
     for (let i = 0; i < 2; i++) {
         $('#spawnBtnArrow').fadeOut(500).fadeIn(500);
     }        
@@ -13,14 +13,14 @@ function next() {
 }
 
 $('#spawnBtn').one('click', function () {
-    $('#spawnBtnArrow').css('display', 'none')
+    $('#spawnBtnArrow').css('display', 'none');
     fadeInFadeOut();
     $('#compactBtnArrow').css('display', 'inline-block');
     for (let i = 0; i < 2; i++) {
         $('#compactBtnArrow').fadeOut(500).fadeIn(500);
     }  
-})
+});
 
 $('#compactBtn').on('click', function () {
-    fadeInFadeOut()
-})
+    fadeInFadeOut();
+});
