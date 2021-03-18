@@ -350,6 +350,18 @@ let compactedPolystyrene = Bodies.rectangle(320, 490, 150, 15, {
 	
 })
 
+// create information arrow
+let arrow = Bodies.rectangle(90, 400, 150, 150, {
+	render: {
+		visible: true,
+		sprite: {
+			texture: "assets/images/arrow.png",
+			xScale: .19,
+			yScale: .19
+		}
+	},
+	isStatic: true
+})
 
 // Function to turn on compactor
 $('#compactBtn').on('click', function () {
@@ -357,7 +369,7 @@ $('#compactBtn').on('click', function () {
 		groundCenter, trapDoorComponent, rightTrapDoor, leftTrapDoor,
 		mouseConstraint
 	]);
-
+	World.add(engine.world, [arrow]);
 	Body.setVelocity(compactedPolystyrene, { x: -2.7, y: 0 });
 
 	$('#spawnBtn').css('pointer-events', 'none');
