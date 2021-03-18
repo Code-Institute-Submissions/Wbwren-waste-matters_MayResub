@@ -16,11 +16,10 @@ canvas {
     max-height: 100vh;
     display: block;
     margin: auto;
-    border: solid .5vh #ff0000;
 }
 
 img {
-    max-height: 5vw;
+    height: 5vw;
     display: inline-block;
     margin: 0;
 }
@@ -73,7 +72,39 @@ p {
 
 @media only screen and (max-width: 320px) {
     img {
-        max-height: 15vw;
+        height: 30vw;
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    img {
+        height: 28vw;
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    img {
+        height: 25vw;
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    img {
+        height: 25vw;
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    img {
+        height: 15vw;
         display: inline-block;
         margin: 0;
     }
