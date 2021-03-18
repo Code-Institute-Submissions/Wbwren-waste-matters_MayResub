@@ -80,7 +80,7 @@ styrofoam texture: https://3dtextures.me/2019/03/21/styrofoam-001/
 speech bubble: http://clipart-library.com/clipart/6TroXbg6c.html
 reset image: 
 https://www.vhv.rs/viewpic/TRxihx_8-bit-restart-button-hd-png-download/
-p button image: https://www.pngkey.com/detail/u2w7q8e6y3e6a9a9_pow-button-mario-
-pixel-art-mario-christmas-pixel/
+p button image: https://www.pngkey.com/detail/u2w7q8e6y3e6a9a9_pow-button-mario-pixel-art-mario-christmas-pixel/
 floor block: <a href='https://webstockreview.net'>https://webstockreview.net</a>
 https://webstockreview.net/image/brick-clipart-super-mario/125781.html
+lever https://www.kissclipart.com/cartoon-lever-png-clipart-computer-icons-clip-art-1f8vxo/s
