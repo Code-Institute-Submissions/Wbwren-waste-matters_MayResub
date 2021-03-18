@@ -6,6 +6,8 @@ function introMessage () {
         polystyrene (EPS) other than to dump it in the landfill where it takes
         up valuable space and works its way to the surface causing other
         environmental concerns.</p>
+        <br>
+        <a onclick="next()">Next</a>
         `
     )
 }
@@ -19,6 +21,8 @@ function compactionInfo () {
     can rapidly fill a bin or container. Waste Matters Ltd. manufactures
     polystyrene compaction equipment which can process large, medium and small
     volumes of Polystyrene efficiently.</p>
+    <br>
+    <a>Drag and drop the polystyrene into the compactor</a>
     `
     )
 }
@@ -26,7 +30,7 @@ function compactionInfo () {
 function benefitsMessage () {
     $('#messageContainer').html(
         `
-        <h2>Benefits of compaction:</h2>
+        <h2>Benefits of compaction</h2>
         <ul style="list-style-type: square;">
             <li>Save space</li>
 
