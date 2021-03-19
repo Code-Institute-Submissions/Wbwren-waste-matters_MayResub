@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
+    <link href="assets/style.css" rel="stylesheet">
+    <link href="assets/images/favicon.png" rel="icon">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/db8b34a031.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="assets\images\favicon.png">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <title>Waste Matters</title>
 </head>
 <body onload="introMessage(); fadeInFadeOut()">
-    <div id="messageContainer"></div>
-    <div id="buttons">
-        <img src="assets/images/button.png" alt="Button to spawn polystyrene boxes" id="spawnBtn" onclick="compactionInfo()">
-        <img src="assets/images/lever.png" id="compactBtn" onclick="this.src ='assets/images/lever-flipped.png', benefitsMessage()">
-        <img src="assets/images/refresh-arrow.png" alt="Button to reset the world" id="resetBtn">
-        <div id="spawnBtnArrow"><i class="fas fa-arrow-left"></i></div>
-        <div id="compactBtnArrow"><i class="fas fa-arrow-left"></i></div>
-    </div>
-</body>
+    <main>
+        <div id="messageContainer"></div>
+        <div id="buttons">
+            <img src="assets/images/button.png" alt="Button to spawn polystyrene boxes" id="spawnBtn" onclick="compactionInfo()">
+            <img src="assets/images/lever.png" alt="Lever switch to turn on compactor" id="compactBtn" onclick="this.src ='assets/images/lever-flipped.png', benefitsMessage()">
+            <img src="assets/images/refresh-arrow.png" alt="Button to reset the world" id="resetBtn">
+            <div id="spawnBtnArrow"><i class="fas fa-arrow-left"></i></div>
+            <div id="compactBtnArrow"><i class="fas fa-arrow-left"></i></div>
+        </div>
+    </main>
 <script src="assets/matter.js"></script>
 <script src="assets/script.js"></script>
 <script src="assets/messages.js"></script>
 <script src="assets/user-instruction.js"></script>
+</body>
 </html>
