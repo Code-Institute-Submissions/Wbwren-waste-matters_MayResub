@@ -45,7 +45,17 @@ The default font weight of 400 is used throughout the page.
 ### Languages used
 
 ### Frameworks, Libraries & Programs Used
-
+* [Matter.js](https://brm.io/matter-js/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Google Fonts](https://fonts.google.com/)
+* [Font Awesome](https://fontawesome.com/)
+* [Git](https://git-scm.com/)
+* [Github](https://github.com/)
+* [Balsamiq Wireframes](https://balsamiq.com/wireframes/)
+* [Microsoft PowerPoint](https://office.live.com/start/powerpoint.aspx)
+* [Microsoft Word](https://office.live.com/start/word.aspx)
+* [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+* [jQuery](https://jquery.com/)
 ## Testing
 
 ### Code Validation
