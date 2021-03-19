@@ -30,7 +30,7 @@ let brick0 = Bodies.rectangle(50, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
-			texture: "assets/images/brick.png",
+			texture: "assets/img/brick.png",
 			xScale: 0.11,
 			yScale: 0.11
 		}
@@ -41,7 +41,7 @@ let brick1 = Bodies.rectangle(150, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
-			texture: "assets/images/brick.png",
+			texture: "assets/img/brick.png",
 			xScale: 0.11,
 			yScale: 0.11
 		}
@@ -52,7 +52,7 @@ let brick2 = Bodies.rectangle(250, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
-			texture: "assets/images/brick.png",
+			texture: "assets/img/brick.png",
 			xScale: 0.11,
 			yScale: 0.11
 		}
@@ -63,7 +63,7 @@ let brick3 = Bodies.rectangle(350, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
-			texture: "assets/images/brick.png",
+			texture: "assets/img/brick.png",
 			xScale: 0.11,
 			yScale: 0.11
 		}
@@ -74,7 +74,7 @@ let brick4 = Bodies.rectangle(450, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
-			texture: "assets/images/brick.png",
+			texture: "assets/img/brick.png",
 			xScale: 0.11,
 			yScale: 0.11
 		}
@@ -85,7 +85,7 @@ let brick5 = Bodies.rectangle(550, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
-			texture: "assets/images/brick.png",
+			texture: "assets/img/brick.png",
 			xScale: 0.11,
 			yScale: 0.11
 		}
@@ -96,7 +96,7 @@ let brick6 = Bodies.rectangle(650, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
-			texture: "assets/images/brick.png",
+			texture: "assets/img/brick.png",
 			xScale: 0.11,
 			yScale: 0.11
 		}
@@ -107,7 +107,7 @@ let brick7 = Bodies.rectangle(750, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
-			texture: "assets/images/brick.png",
+			texture: "assets/img/brick.png",
 			xScale: 0.11,
 			yScale: 0.11
 		}
@@ -122,7 +122,7 @@ let blackRectangle = Bodies.rectangle(490, 800, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
-			texture: "assets/images/black.png",
+			texture: "assets/img/black.png",
 			xScale: 0.7,
 			yScale: 2.5
 		},
@@ -139,7 +139,7 @@ let compactor = Bodies.rectangle(400, 410, 0.01, 0.01, {
 		frictionStatic: 0.5,
         render: {
             sprite: {
-                texture: "assets/images/prwm370.png",
+                texture: "assets/img/prwm370.png",
                 xScale: 0.75,
                 yScale: 0.75
             }
@@ -156,7 +156,7 @@ let greenPipe = Bodies.rectangle(200, 100, 0.01, 0.01, {
 	render: {
 		visible: true,
 		sprite: {
-			texture: "assets/images/green-pipe.png",
+			texture: "assets/img/green-pipe.png",
 			xScale: 0.3,
 			yScale: 0.3
 		}
@@ -186,8 +186,8 @@ $("#spawnBtn").click(function() {
 	The image overlay of the polystyrene blocks needs to be scaled down to
 	the size of the block created, the ratio is 1:1000
 	*/
-	let xAxisImageScaleValue = randomWidthValue/1000;
-	let yAxisImageScaleValue = randomLengthValue/1000;
+	let xAxisimgcaleValue = randomWidthValue/1000;
+	let yAxisimgcaleValue = randomLengthValue/1000;
 
 	polystyreneBox = Bodies.rectangle(randomXCord, 100, randomWidthValue,
 		randomLengthValue, {
@@ -200,9 +200,9 @@ $("#spawnBtn").click(function() {
 
         render: {
             sprite: {
-                texture: "assets/images/polystyrene.png",
-                xScale: xAxisImageScaleValue,
-                yScale: yAxisImageScaleValue
+                texture: "assets/img/polystyrene.png",
+                xScale: xAxisimgcaleValue,
+                yScale: yAxisimgcaleValue
             }
         },
 
@@ -322,7 +322,7 @@ let compactorForeground = Bodies.rectangle(400, 471, 0.01, 0.01, {
 	render: {
 		visible: true,
 		sprite: {
-			texture: "assets/images/prwm370-cropped.png",
+			texture: "assets/img/prwm370-cropped.png",
 			xScale: 0.75,
 			yScale: 0.75
 		}
@@ -333,7 +333,7 @@ let compactedPolystyrene = Bodies.rectangle(320, 490, 150, 15, {
 	render: {
 		visible: true,
 		sprite: {
-			texture: "assets/images/polystyrene.png",
+			texture: "assets/img/polystyrene.png",
 			xScale: 0.146,
 			yScale: 0.014
 		}
@@ -352,7 +352,7 @@ let arrow = Bodies.rectangle(90, 400, 150, 150, {
 	render: {
 		visible: true,
 		sprite: {
-			texture: "assets/images/arrow.png",
+			texture: "assets/img/arrow.png",
 			xScale: 0.19,
 			yScale: 0.19
 		}
