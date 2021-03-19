@@ -30,10 +30,6 @@ __Goal__: To inform users about polystyrene recycling in an engaging manor and s
 ### Scope
 * An interactive demo utilizing Matter.js, a 2D rigid body JavaScript physics engine.
 
-### Structure
-
-### Skeleton
-
 ### Surface
 
 #### Color Scheme
@@ -44,7 +40,7 @@ __Goal__: To inform users about polystyrene recycling in an engaging manor and s
 Roboto Mono is the font used on the webpage with monospace as the fallback font in the case of the default font failing to load correctly.
 The default font weight of 400 is used throughout the page.
 #### Imagery
-
+* The imagery is cartoon-like in style.
 ### Wireframes
 * [Mobile View](https://github.com/Wbwren/waste-matters/blob/master/wireframes/mobile-wireframe.png)
 
