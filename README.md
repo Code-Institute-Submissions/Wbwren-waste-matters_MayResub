@@ -9,12 +9,20 @@ Waste matters Ltd. offers waste and recycling solutions to Irish businesses. The
 * As a user, I would like the user experience on the website to be
 intuitive.
 
+    * The interactive demo guides users through using [clear instructions](https://github.com/Wbwren/waste-matters/blob/master/assets/img/user-instruction-arrow.png)
+
 * As a user, I want to learn about polystyrene compactors and how
 they work.
 
+    * The demo demonstrates how the [polystyrene compactors work](https://github.com/Wbwren/waste-matters/blob/master/assets/img/compactor-compacting.png)
+
 * As a user, I want to learn about polystyrene recycling in an engaging manor.
 
+    * The interactive demo requires user engagement while displaying the information in a [clear manor](https://github.com/Wbwren/waste-matters/blob/master/assets/img/user-notification.png)
+
 * As a user, I want my experience on the website to be enjoyable.
+
+    * The interactive demo is built on a rigid body physics engine. [Interacting with the polystyrene blocks](https://github.com/Wbwren/waste-matters/blob/master/assets/img/interacting-with-blocks.png) can elicit a positive emotional response.
 
 ### Strategy
 __Goal__: To inform users about polystyrene recycling in an engaging manor and sell polystyrene compactors through waste matters Ltd.
@@ -95,6 +103,7 @@ This project is an interactive game built on the 2d physics engine matter.js. It
 |     	| [Image of vertices bug](https://github.com/Wbwren/waste-matters/blob/master/assets/img/vertices-bug.png)     	|                                                                                                                                                                                                                               	|
 <br>
 ### Unresolved Bugs
+
 * Users can turn on the compactor before placing any objects into it.
 
 ### Google Lighthouse Scores
