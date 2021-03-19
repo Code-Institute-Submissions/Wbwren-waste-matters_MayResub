@@ -44,7 +44,7 @@ The default font weight of 400 is used throughout the page.
 
 * [Desktop View](https://github.com/Wbwren/waste-matters/blob/master/wireframes/desktop-wireframe.png)
 ## Features
-
+This project is an interactive game built on the 2d physics engine matter.js. It allows users to place polystyrene objects into a compactor and turn it on. This game serves the purpose of engaging the user and allowing for an alternative way of imparting information. Facts about polystyrene recycling, polystyrene compactors and waste matters appear as the user interacts with the demo.
 ## Technologies Used
 ### Languages used
 * HTML5
