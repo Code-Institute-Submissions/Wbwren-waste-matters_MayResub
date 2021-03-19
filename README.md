@@ -147,12 +147,12 @@ bug: could not get vertices to work correctly on matter.js
 7. Press enter and your local clone will be available.
 ## Credits
 ### Media
-Compactor image: https://wastematters.ie
-Styrofoam texture: https://3dtextures.me/2019/03/21/styrofoam-001/
-P button image: https://www.pngkey.com/detail/u2w7q8e6y3e6a9a9_pow-button-mario-pixel-art-mario-christmas-pixel/
-Floor block image: https://webstockreview.net/image/brick-clipart-super-mario/125781.html
-Lever image: https://www.kissclipart.com/cartoon-lever-png-clipart-computer-icons-clip-art-1f8vxo/s
-Refresh-arrow: http://clipart-library.com/clipart/8T68KdEGc.html
-Green pipe: https://publicdomainvectors.org/en/free-clipart/Green-pipe/39369.html
+* Compactor image: https://wastematters.ie
+* Styrofoam texture: https://3dtextures.me/2019/03/21/styrofoam-001/
+* P button image: https://www.pngkey.com/detail/u2w7q8e6y3e6a9a9_pow-button-mario-pixel-art-mario-christmas-pixel/
+* Floor block image: https://webstockreview.net/image/brick-clipart-super-mario/125781.html
+* Lever image: https://www.kissclipart.com/cartoon-lever-png-clipart-computer-icons-clip-art-1f8vxo/s
+* Refresh-arrow: http://clipart-library.com/clipart/8T68KdEGc.html
+* Green pipe: https://publicdomainvectors.org/en/free-clipart/Green-pipe/39369.html
 
 ### Acknowledgments
