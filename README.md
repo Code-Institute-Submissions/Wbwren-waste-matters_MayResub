@@ -28,8 +28,10 @@ __Goal__: To inform users about polystyrene recycling in an engaging manor and s
 
 ### Surface
 
-#### Colour Scheme
-
+#### Color Scheme
+* Font color: #f0f8ff
+* background color: #14151F
+* User instructions: #ff0000
 #### Typography
 Roboto Mono is the font used on the webpage with monospace as the fallback font in the case of the default font failing to load correctly.
 The default font weight of 400 is used throughout the page.
