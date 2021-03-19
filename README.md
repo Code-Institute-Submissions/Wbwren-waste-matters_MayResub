@@ -43,7 +43,9 @@ The default font weight of 400 is used throughout the page.
 * [Desktop View](https://github.com/Wbwren/waste-matters/blob/master/wireframes/desktop-wireframe.png)
 ## Technologies Used
 ### Languages used
-
+* HTML5
+* CSS3
+* JavaScript
 ### Frameworks, Libraries & Programs Used
 * [Matter.js](https://brm.io/matter-js/)
 * [Visual Studio Code](https://code.visualstudio.com/)
