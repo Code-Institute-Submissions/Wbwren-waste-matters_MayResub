@@ -1,3 +1,4 @@
+/* Prevents scroll on smaller screens */
 html,
 body {
 	overflow-x: hidden;
@@ -9,6 +10,7 @@ body {
 	font-family: 'Roboto Mono', monospace;
 }
 
+/* Position the matter.js canvas */
 canvas {
 	width: 100vw;
 	max-width: 120vh;
@@ -101,6 +103,7 @@ a:hover {
 	background-color: #ffffff;
 }
 
+/* Media queries */
 @media only screen and (max-width: 320px) {
 	img {
 		height: 30vw;
