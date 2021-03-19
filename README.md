@@ -94,9 +94,10 @@ The default font weight of 400 is used throughout the page.
 | 5   	| Could not get vertices to work correctly on matter.js                                                          	| This problem was not resolved.                                                                                                                                                                                                	|
 |     	| [Image of vertices bug](https://github.com/Wbwren/waste-matters/blob/master/assets/img/vertices-bug.png)     	|                                                                                                                                                                                                                               	|
 <br>
+
 ### Google Lighthouse Scores
-* [Lighthouse mobile result](https://github.com/Wbwren/waste-matters/blob/master/assets/img/lighthouse-result-mobile.png)
-* [Lighthouse desktop result](https://github.com/Wbwren/waste-matters/blob/master/assets/img/lighthouse-result-desktop.png)
+* [Lighthouse mobile result](https://github.com/Wbwren/waste-matters/blob/master/assets/img/lighthouse-results-mobile.png)
+* [Lighthouse desktop result](https://github.com/Wbwren/waste-matters/blob/master/assets/img/lighthouse-results-desktop.png)
 
 ## Deployment to Github Pages
 1. Create a Github account at [github.com](https://github.com/)
