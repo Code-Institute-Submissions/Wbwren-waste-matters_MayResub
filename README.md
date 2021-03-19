@@ -132,7 +132,19 @@ bug: could not get vertices to work correctly on matter.js
 
 17. After a few minutes, the site will be published to GitHub pages and can be accessed using the URL at the GitHub Pages section
 ## Clone
+1. Follow this link to my [Github Repository](https://github.com/Wbwren/waste-matters).
 
+2. Click 'Clone or Download'.
+
+3. In the Clone with HTTPs section, click the 'copy' icon.
+
+4. In your local Integrated Development Environment open Git Bash.
+
+5. Change the current working directory to where you want the cloned directory to be located.
+
+6. Type 'git clone', and paste the URL you copied before.
+
+7. Press enter and your local clone will be available.
 ## Credits
 ### Acknowledgments
 styrofoam texture: https://3dtextures.me/2019/03/21/styrofoam-001/
