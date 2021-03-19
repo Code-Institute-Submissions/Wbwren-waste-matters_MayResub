@@ -111,9 +111,18 @@ This project is an interactive game built on the 2d physics engine matter.js. It
 
 <br>
 
+### Responsiveness Testing
+* Chrome developer tools was used to test a wide variety of device sizes and resolutions.
+
+* The website has been tested on an iPhone 5, Samsung Galaxy s10, Acer swift 3 and a desktop PC with a 1080p and 4k monitor.
+
+* [Am I responsive image](https://github.com/Wbwren/waste-matters/blob/master/assets/img/am-i-responsive.png)
+
 ### Unresolved Bugs
 
 * Users can turn on the compactor before placing any objects into it.
+
+* When smaller devices are in horizontal view mode it can [break the responsiveness](https://github.com/Wbwren/waste-matters/blob/master/assets/img/small-screen-horizontal-view.png) due to canvas limitations with matter.js. However, as this website is primarily targeted to professionals looking to buy polystyrene compactors it is very likely it will be viewed on a desktop.  
 
 ### Google Lighthouse Scores
 * [Lighthouse mobile result](https://github.com/Wbwren/waste-matters/blob/master/assets/img/lighthouse-results-mobile.png)
