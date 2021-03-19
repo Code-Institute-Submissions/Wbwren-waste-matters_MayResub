@@ -73,28 +73,26 @@ The default font weight of 400 is used throughout the page.
 ### Functionality test
 
 ### Problems during development
-**Problem**: Textures not appearing on matter.js shapes
+1. **Problem**: Textures not appearing on matter.js shapes
 **Fix**: Disable wireframes under render.options.wireframes
 
-**Problem**: Couldn't get polystyrene blocks to appear behind the compactor image in
+2. **Problem**: Couldn't get polystyrene blocks to appear behind the compactor image in
 the canvas (3D effect)
-**Fix**: The order in which you add objects to the world determines the z-index.
-Adding the foreground image of the compactor after the polystyrene blocks allows the blocks to appear behind
-the image, giving the desired 3D effect.
+**Fix**: The order in which you add objects to the world determines the z-index. Adding the foreground image of the compactor after the polystyrene blocks allows the blocks to appear behind the image, giving the desired 3D effect.
 
-**Problem**: When user creates a polystyrene block, they appear in-front of the
+3. **Problem**: When user creates a polystyrene block, they appear in-front of the
 images, giving no 3D effect.
 **Fix**: Use add to world method within the polystyrene creation function and re-add
 the images on each call.
 
-**Problem**: On-screen messages were interfering with the mouse drag function
-* [Image of mouse drag bug](https://github.com/Wbwren/waste-matters/blob/master/assets/images/mouse-drag-bug.png)
+4. **Problem**: On-screen messages were interfering with the mouse drag function
+* [Image of mouse drag bug](https://github.com/Wbwren/waste-matters/blob/master/assets/img/mouse-drag-bug.png)
 
 **Fix**: Add a style attribute of 'pointer-events: none;' to the message div
-* [Image of mouse drag bug fix](https://github.com/Wbwren/waste-matters/blob/master/assets/images/mouse-drag-bug-fix.png)
+* [Image of mouse drag bug fix](https://github.com/Wbwren/waste-matters/blob/master/assets/img/mouse-drag-bug-fix.png)
 
-**Problem**: Could not get vertices to work correctly on matter.js
-* [Image of vertices bug](https://github.com/Wbwren/waste-matters/blob/master/assets/images/vertices-bug.png)
+5. **Problem**: Could not get vertices to work correctly on matter.js
+* [Image of vertices bug](https://github.com/Wbwren/waste-matters/blob/master/assets/img/vertices-bug.png)
 * This problem was not resolved.
 
 ## Deployment to Github Pages
