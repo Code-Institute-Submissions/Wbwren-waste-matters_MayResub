@@ -71,31 +71,31 @@ The default font weight of 400 is used throughout the page.
 
 * JavaScript was passed through the linter jshint with no warnings
 ### Functionality test
-Error: textures were not appearing on matter.js shapes
-Fix: disable render wireframes
 
+### Problems during development
+**Problem**: Textures not appearing on matter.js shapes
+**Fix**: Disable wireframes under render.options.wireframes
 
-Problem: Couldn't get polystyrene blocks to appear behind the compactor image in
+**Problem**: Couldn't get polystyrene blocks to appear behind the compactor image in
 the canvas (3D effect)
-Fix: The order in which you add objects to the world determines the z-index.
-Adding the foreground image 
-of the compactor after the polystyrene blocks allows the blocks to appear behind
+**Fix**: The order in which you add objects to the world determines the z-index.
+Adding the foreground image of the compactor after the polystyrene blocks allows the blocks to appear behind
 the image, giving the desired 3D effect.
 
-Problem: when user creates a polystyrene block, they appear in-front of the
+**Problem**: When user creates a polystyrene block, they appear in-front of the
 images, giving no 3D effect.
-Fix: use add to world method within the polystyrene creation function and re-add
+**Fix**: Use add to world method within the polystyrene creation function and re-add
 the images on each call.
 
-Problem: on-screen messages were interfering with the mouse drag function
+**Problem**: On-screen messages were interfering with the mouse drag function
 * [Image of mouse drag bug](https://github.com/Wbwren/waste-matters/blob/master/assets/images/mouse-drag-bug.png)
 
-Fix: add a style attribute of 'pointer-events: none;' to the message div
+**Fix**: Add a style attribute of 'pointer-events: none;' to the message div
 * [Image of mouse drag bug fix](https://github.com/Wbwren/waste-matters/blob/master/assets/images/mouse-drag-bug-fix.png)
 
-bug: could not get vertices to work correctly on matter.js
+**Problem**: Could not get vertices to work correctly on matter.js
 * [Image of vertices bug](https://github.com/Wbwren/waste-matters/blob/master/assets/images/vertices-bug.png)
-
+* This problem was not resolved.
 
 ## Deployment to Github Pages
 1. Create a Github account at [github.com](https://github.com/)
