@@ -49,8 +49,11 @@ The default font weight of 400 is used throughout the page.
 ## Testing
 
 ### Code Validation
+* HTML was validated using W3C Markup Validation Service.
 
+* CSS was validated using W3C CSS Validation Service - Jigsaw
 
+* JavaScript was passed through the linter jshint with no warnings
 ### Functionality test
 Error: textures were not appearing on matter.js shapes
 Fix: disable render wireframes
