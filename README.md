@@ -9,7 +9,7 @@ Waste matters Ltd. offers waste and recycling solutions to Irish businesses. The
 * As a user, I would like the user experience on the website to be
 intuitive.
 
-    * The interactive demo guides users through using [clear instructions](https://github.com/Wbwren/waste-matters/blob/master/assets/img/user-instruction-arrow.png)
+    * The interactive demo guides users using [clear instructions](https://github.com/Wbwren/waste-matters/blob/master/assets/img/user-instruction-arrow.png)
 
 * As a user, I want to learn about polystyrene compactors and how
 they work.
@@ -102,6 +102,15 @@ This project is an interactive game built on the 2d physics engine matter.js. It
 | 5   	| Could not get vertices to work correctly on matter.js                                                          	| This problem was not resolved.                                                                                                                                                                                                	|
 |     	| [Image of vertices bug](https://github.com/Wbwren/waste-matters/blob/master/assets/img/vertices-bug.png)     	|                                                                                                                                                                                                                               	|
 <br>
+### Browser Compatibility
+| Num | Browser         | Test result |
+| ---|:-------------:| :----: |
+| 1 | Chrome | Passed
+| 2 | Opera | Passed
+| 3 | Mozzilla | Passed
+
+<br>
+
 ### Unresolved Bugs
 
 * Users can turn on the compactor before placing any objects into it.
