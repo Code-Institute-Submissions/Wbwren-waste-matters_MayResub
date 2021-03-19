@@ -36,7 +36,11 @@ The default font weight of 400 is used throughout the page.
 #### Imagery
 
 ### Wireframes
+* [Mobile View](https://github.com/Wbwren/waste-matters/blob/master/wireframes/mobile-wireframe.png)
 
+* [Tablet View](https://github.com/Wbwren/waste-matters/blob/master/wireframes/tablet-wireframe.png)
+
+* [Desktop View](https://github.com/Wbwren/waste-matters/blob/master/wireframes/desktop-wireframe.png)
 ## Technologies Used
 ### Languages used
 
