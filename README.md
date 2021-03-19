@@ -102,6 +102,7 @@ This project is an interactive game built on the 2d physics engine matter.js. It
 | 5   	| Could not get vertices to work correctly on matter.js                                                          	| This problem was not resolved.                                                                                                                                                                                                	|
 |     	| [Image of vertices bug](https://github.com/Wbwren/waste-matters/blob/master/assets/img/vertices-bug.png)     	|                                                                                                                                                                                                                               	|
 <br>
+
 ### Browser Compatibility
 | Num | Browser         | Test result |
 | ---|:-------------:| :----: |
