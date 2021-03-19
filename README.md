@@ -1,5 +1,34 @@
 # Waste Matters
+## Table of Contents
+- [Project purpose](#project-purpose)
+- [UX](#ux)
+  * [User stories](#user-stories)
+  * [Strategy](#strategy)
+  * [Scope](#scope)
+  * [Surface](#surface)
+    + [Color Scheme](#color-scheme)
+    + [Typography](#typography)
+    + [Imagery](#imagery)
+  * [Wireframes](#wireframes)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+  * [Languages used](#languages-used)
+  * [Frameworks, Libraries & Programs Used](#frameworks--libraries---programs-used)
+- [Testing](#testing)
+  * [Code Validation](#code-validation)
+  * [Functionality test](#functionality-test)
+  * [Problems during development](#problems-during-development)
+  * [Browser Compatibility](#browser-compatibility)
+  * [Responsiveness Testing](#responsiveness-testing)
+  * [Unresolved Bugs](#unresolved-bugs)
+  * [Google Lighthouse Scores](#google-lighthouse-scores)
+- [Deployment to Github Pages](#deployment-to-github-pages)
+- [Clone](#clone)
+- [Credits](#credits)
+  * [Media](#media)
+  * [Acknowledgments](#acknowledgments)
 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 ## Project purpose
 Waste matters Ltd. offers waste and recycling solutions to Irish businesses. The interactive demo aims to advertise and sell polystyrene compactors. The demo will guide the user through a mini-game in which they will drag and drop polystyrene blocks into a compactor machine before turning it on. While interacting with the demo, the user will receive key facts about polystyrene recycling and waste matters. On completion of the demo, the user will have the option to ‘learn more’ which will lead them to the current waste matters website.
 
