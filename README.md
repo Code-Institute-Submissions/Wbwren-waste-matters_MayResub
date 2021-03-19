@@ -21,6 +21,13 @@ __Goal__: To inform users about polystyrene recycling in an engaging manor and s
 
 ### Scope
 * An interactive demo utilizing Matter.js, a 2D rigid body JavaScript physics engine.
+
+### Structure
+
+### Skeleton
+
+### Surface
+
 #### Colour Scheme
 
 #### Typography
