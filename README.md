@@ -43,6 +43,8 @@ The default font weight of 400 is used throughout the page.
 * [Tablet View](https://github.com/Wbwren/waste-matters/blob/master/wireframes/tablet-wireframe.png)
 
 * [Desktop View](https://github.com/Wbwren/waste-matters/blob/master/wireframes/desktop-wireframe.png)
+## Features
+
 ## Technologies Used
 ### Languages used
 * HTML5
@@ -96,7 +98,39 @@ bug: could not get vertices to work correctly on matter.js
 
 
 ## Deployment to Github Pages
+1. Create a Github account at [github.com](https://github.com/)
 
+2. Click on the 'New' button in the top left corner
+
+3. Enter a name for the repository, check the 'Add a README file' box
+
+4. Click 'Create repository'
+
+5. Open the repository in Gitpod
+
+6. Save changes by clicking the save button
+
+7. Once a feature has been successfully created using the 'git add .' command to stage the changes made
+
+8. Then use the command 'git commit -m"[enter commit title here]"'
+
+9. All meaningful changes to the code should have its own commit
+
+10. To push the commits to Github use the command 'git push'
+
+11. Once the website is ready for deployment return to [github.com](https://github.com/)
+
+12. Click on the 'settings' tab
+
+13. Scroll down to the 'GitHub Pages' section
+
+14. Click the 'None' dropdown button
+
+15. Select the master branch
+
+16. Click save
+
+17. After a few minutes, the site will be published to GitHub pages and can be accessed using the URL at the GitHub Pages section
 ## Clone
 
 ## Credits
