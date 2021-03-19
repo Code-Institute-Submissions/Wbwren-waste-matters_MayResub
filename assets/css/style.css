@@ -1,169 +1,196 @@
+html,
 body {
-    background-color: #14151F;
-    font-family: 'Roboto Mono', monospace;}
+	overflow-x: hidden;
+}
+
+body {
+	position: relative;
+	background-color: #14151F;
+	font-family: 'Roboto Mono', monospace;
+}
 
 canvas {
-    width: 100vw;
-    max-width: 120vh;
-    max-height: 100vh;
-    display: block;
-    margin: auto;
+	width: 100vw;
+	max-width: 120vh;
+	max-height: 100vh;
+	display: block;
+	margin: auto;
+	top: 0;
 }
 
 img {
-    height: 5vw;
-    display: inline-block;
-    margin: 0;
+	height: 5vw;
+	display: inline-block;
+	margin: 0;
 }
 
 #buttons {
-    position: fixed;
-    display: block;
-    margin: 0;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	display: block;
+	margin: 0;
 }
 
 #spawnBtn {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+	position: fixed;
+	left: 0;
+	bottom: 0;
 }
 
 #resetBtn {
-    position: fixed;
-    right: 0;
-    bottom: 0;
+	position: fixed;
+	right: 0;
+	bottom: 0;
 }
 
 #compactBtn {
-    position: fixed;
-    bottom: 0;
-    margin: auto;
-    left: 0;
-    right: 0;
+	position: fixed;
+	bottom: 0;
+	margin: auto;
+	left: 0;
+	right: 0;
 }
 
 #messageContainer {
-    display: inline-block;
-    position: fixed;
-    top: 1vh;
-    right: 2vw;
-    text-align: left;
-    max-width: 25vw;
-    color: #f0f8ff;
-    pointer-events: all;
-    font-size: .7vw;
-    transition: ease-in-out
+	display: inline-block;
+	position: fixed;
+	top: 1vh;
+	right: 2vw;
+	text-align: left;
+	max-width: 25vw;
+	color: #f0f8ff;
+	pointer-events: all;
+	font-size: 0.7vw;
+	transition: ease-in-out;
 }
 
 ul {
-    padding: 0;
+	padding: 0;
 }
 
-#spawnBtnArrow, #compactBtnArrow {
-    position: fixed;
-    bottom: 0;
-    left: 7vw;
-    color: #ff0000;
-    display: none;
-    font-size: 4vw;
+#spawnBtnArrow,
+#compactBtnArrow {
+	position: fixed;
+	bottom: 0;
+	left: 7vw;
+	color: #ff0000;
+	display: none;
+	font-size: 4vw;
 }
 
 #compactBtnArrow {
-    left: 55vw;
+	left: 55vw;
 }
 
 h2 {
-    font-size: 2vw;
+	font-size: 2vw;
 }
 
 a {
-    background-color: #ff0000;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #ffffff;
-    padding: 20px;
+	background-color: #ff0000;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #ffffff;
+	padding: 20px;
 }
 
 a:hover {
-    text-decoration: none;
-    color: #ff0000;
-    background-color: #ffffff;
+	text-decoration: none;
+	color: #ff0000;
+	background-color: #ffffff;
 }
 
 @media only screen and (max-width: 320px) {
-    img {
-        height: 30vw;
-        display: inline-block;
-        margin: 0;
-    }
+	img {
+		height: 30vw;
+		display: inline-block;
+		margin: 0;
+	}
 }
 
 @media only screen and (max-width: 375px) {
-    img {
-        height: 28vw;
-        display: inline-block;
-        margin: 0;
-    }
+	img {
+		height: 28vw;
+		display: inline-block;
+		margin: 0;
+	}
 }
 
 @media only screen and (max-width: 425px) {
-    img {
-        height: 25vw;
-        display: inline-block;
-        margin: 0;
-    }
+	img {
+		height: 25vw;
+		display: inline-block;
+		margin: 0;
+	}
 }
 
 @media only screen and (max-width: 720px) {
-    img {
-        height: 25vw;
-        display: inline-block;
-        margin: 0;
-    }
+	img {
+		height: 25vw;
+		display: inline-block;
+		margin: 0;
+	}
 }
 
 @media only screen and (max-width: 1024px) {
-    img {
-        height: 15vw;
-        display: inline-block;
-        margin: 0;
-    }
+	img {
+		height: 15vw;
+		display: inline-block;
+		margin: 0;
+	}
 
-    #messageContainer {
-        top: 55vh;
-        margin: auto;
-        left: 0;
-        right: 0;
-        font-size: 2.4vw;
-        max-width: 80vw;
-    }
+	#messageContainer {
+		top: 55vh;
+		margin: auto;
+		left: 0;
+		right: 0;
+		font-size: 2.4vw;
+		max-width: 80vw;
+	}
 
-    #wasteMattersLink {
-        top: 80vh;
-        margin: auto;
-        left: 0;
-        right: 0;
-        font-size: 3vw;
-        max-width: 60vw;
-    }
+	#wasteMattersLink {
+		top: 80vh;
+		margin: auto;
+		left: 0;
+		right: 0;
+		font-size: 3vw;
+		max-width: 60vw;
+	}
+
+	h2 {
+		font-size: 4vw;
+	}
+
+	a {
+		padding: 15px;
+	}
+
+	#spawnBtnArrow,
+	#compactBtnArrow {
+		font-size: 10vw;
+		bottom: 1vh;
+	}
+
+	#spawnBtnArrow {
+		left: 18vw;
+	}
+
+	#compactBtnArrow {
+		left: 57vw;
+	}
+
+	#spawnBtn,
+	#resetBtn,
+	#compactBtn {
+		bottom: 1vh;
+	}
+
+	#spawnBtn {
+		left: 1vw;
+	}
     
-    h2 {
-        font-size: 4vw;
-    }
-
-    a {
-        padding: 15px;
-    }
-
-    #spawnBtnArrow, #compactBtnArrow {
-        font-size: 10vw;
-    }
-
-    #spawnBtnArrow {
-        left: 18vw;
-    }
-
-    #compactBtnArrow {
-        left: 57vw;
-    }
+	#resetBtn {
+		right: 1vw;
+	}
 }
