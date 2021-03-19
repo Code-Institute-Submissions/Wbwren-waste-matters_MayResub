@@ -184,3 +184,8 @@ This project is an interactive game built on the 2d physics engine matter.js. It
 * Green pipe: https://publicdomainvectors.org/en/free-clipart/Green-pipe/39369.html
 
 ### Acknowledgments
+* [Stackoverflow](https://stackoverflow.com/) as a resource for learning and troubleshooting.
+* [Matter.js documentation](https://brm.io/matter-js/docs/)
+* [The coding train YouTube channel](https://www.youtube.com/user/shiffman/)
+* A special thanks to my mentor Brian Macharia for his invaluable guidance throughout this project.
+* Thanks to Simen Daehlin for his very helpful feedback on the project.
