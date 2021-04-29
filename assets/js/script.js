@@ -151,7 +151,7 @@ let compactor = Bodies.rectangle(400, 410, 0.01, 0.01, {
 		},
 	});
 
-let greenPipe = Bodies.rectangle(200, 100, 0.01, 0.01, {
+let greenPipe = Bodies.rectangle(480, 50, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		visible: true,
@@ -180,7 +180,7 @@ $("#spawnBtn").click(function() {
 	Generate a random number for the x-axis coordinate in which the block
 	will be created
 	*/
-	let randomXCord = Math.floor((Math.random()*100) + 150);
+	let randomXCord = Math.floor((Math.random()*100) + 450);
 
 	/*
 	The image overlay of the polystyrene blocks needs to be scaled down to
