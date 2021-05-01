@@ -2,10 +2,10 @@
 const Engine = Matter.Engine,
 	MouseConstraint = Matter.MouseConstraint,
 	Mouse = Matter.Mouse,
-    Render = Matter.Render,
-    World = Matter.World,
+	Render = Matter.Render,
+	World = Matter.World,
 	Body = Matter.Body,
-    Bodies = Matter.Bodies;
+	Bodies = Matter.Bodies;
 
 // Create an engine
 const engine = Engine.create();
@@ -13,11 +13,11 @@ const engine = Engine.create();
 // Create a renderer
 // Wireframes must be disabled to allow the custom textures
 const render = Render.create({
-    element: document.body,
-    engine: engine,
-    options: {
-        wireframes: false, 
-    }
+	element: document.body,
+	engine: engine,
+	options: {
+		wireframes: false,
+	}
 });
 
 // Create the ground
@@ -26,7 +26,7 @@ let groundCenter = Bodies.rectangle(490, 570, 100, 60, { isStatic: true });
 let groundRight = Bodies.rectangle(670, 570, 260, 60, { isStatic: true });
 
 // Add brick texture to the ground
-let brick0 = Bodies.rectangle(50, 588, 0.01, 0.01, { 
+let brick0 = Bodies.rectangle(50, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
@@ -34,10 +34,10 @@ let brick0 = Bodies.rectangle(50, 588, 0.01, 0.01, {
 			xScale: 0.11,
 			yScale: 0.11
 		}
-}
+	}
 });
 
-let brick1 = Bodies.rectangle(150, 588, 0.01, 0.01, { 
+let brick1 = Bodies.rectangle(150, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
@@ -45,10 +45,10 @@ let brick1 = Bodies.rectangle(150, 588, 0.01, 0.01, {
 			xScale: 0.11,
 			yScale: 0.11
 		}
-}
+	}
 });
 
-let brick2 = Bodies.rectangle(250, 588, 0.01, 0.01, { 
+let brick2 = Bodies.rectangle(250, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
@@ -56,10 +56,10 @@ let brick2 = Bodies.rectangle(250, 588, 0.01, 0.01, {
 			xScale: 0.11,
 			yScale: 0.11
 		}
-}
+	}
 });
 
-let brick3 = Bodies.rectangle(350, 588, 0.01, 0.01, { 
+let brick3 = Bodies.rectangle(350, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
@@ -67,10 +67,10 @@ let brick3 = Bodies.rectangle(350, 588, 0.01, 0.01, {
 			xScale: 0.11,
 			yScale: 0.11
 		}
-}
+	}
 });
 
-let brick4 = Bodies.rectangle(450, 588, 0.01, 0.01, { 
+let brick4 = Bodies.rectangle(450, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
@@ -78,10 +78,10 @@ let brick4 = Bodies.rectangle(450, 588, 0.01, 0.01, {
 			xScale: 0.11,
 			yScale: 0.11
 		}
-}
+	}
 });
 
-let brick5 = Bodies.rectangle(550, 588, 0.01, 0.01, { 
+let brick5 = Bodies.rectangle(550, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
@@ -89,10 +89,10 @@ let brick5 = Bodies.rectangle(550, 588, 0.01, 0.01, {
 			xScale: 0.11,
 			yScale: 0.11
 		}
-}
+	}
 });
 
-let brick6 = Bodies.rectangle(650, 588, 0.01, 0.01, { 
+let brick6 = Bodies.rectangle(650, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
@@ -100,10 +100,10 @@ let brick6 = Bodies.rectangle(650, 588, 0.01, 0.01, {
 			xScale: 0.11,
 			yScale: 0.11
 		}
-}
+	}
 });
 
-let brick7 = Bodies.rectangle(750, 588, 0.01, 0.01, { 
+let brick7 = Bodies.rectangle(750, 588, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
@@ -111,14 +111,14 @@ let brick7 = Bodies.rectangle(750, 588, 0.01, 0.01, {
 			xScale: 0.11,
 			yScale: 0.11
 		}
-}
+	}
 });
 
 /*
 When the blocks are 'compacted' they fall through the map, this black triangle
 hides them from view as they fall
 */
-let blackRectangle = Bodies.rectangle(490, 800, 0.01, 0.01, { 
+let blackRectangle = Bodies.rectangle(490, 800, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		sprite: {
@@ -126,30 +126,30 @@ let blackRectangle = Bodies.rectangle(490, 800, 0.01, 0.01, {
 			xScale: 0.7,
 			yScale: 2.5
 		},
-}
+	}
 });
 
 // Add polystyrene compactor object to the canvas
 let compactor = Bodies.rectangle(400, 410, 0.01, 0.01, {
-		isStatic: true,
-		density: 0.1,
-		restitution: 0,
-		friction: 0.1,
-		frictionAir: 0.01,
-		frictionStatic: 0.5,
-        render: {
-            sprite: {
-                texture: "assets/img/prwm370.png",
-                xScale: 0.75,
-                yScale: 0.75
-            }
-        },
-		collisionFilter: {
-			group: 0,
-			category: 1,
-			mask: 255
-		},
-	});
+	isStatic: true,
+	density: 0.1,
+	restitution: 0,
+	friction: 0.1,
+	frictionAir: 0.01,
+	frictionStatic: 0.5,
+	render: {
+		sprite: {
+			texture: "assets/img/prwm370.png",
+			xScale: 0.75,
+			yScale: 0.75
+		}
+	},
+	collisionFilter: {
+		group: 0,
+		category: 1,
+		mask: 255
+	},
+});
 
 let greenPipe = Bodies.rectangle(480, 50, 0.01, 0.01, {
 	isStatic: true,
@@ -166,27 +166,27 @@ let greenPipe = Bodies.rectangle(480, 50, 0.01, 0.01, {
 let boxQuantity = 0;
 
 // Function to generate random sized polystyrene blocks
-function spawnBlock () {
+function spawnBlock() {
 	/* 
 	Generate a random number for the length and width of the polystyrene
 	blocks. A value of 10 is added to the number to ensure the blocks are large
 	enough to click easily
 	*/
-	let randomWidthValue = Math.floor((Math.random()*40) + 20); 
-	let randomLengthValue = Math.floor((Math.random()*90) + 20);
+	let randomWidthValue = Math.floor((Math.random() * 40) + 20);
+	let randomLengthValue = Math.floor((Math.random() * 90) + 20);
 
 	/*
 	Generate a random number for the x-axis coordinate in which the block
 	will be created
 	*/
-	let randomXCord = Math.floor((Math.random()*100) + 450);
+	let randomXCord = Math.floor((Math.random() * 100) + 450);
 
 	/*
 	The image overlay of the polystyrene blocks needs to be scaled down to
 	the size of the block created, the ratio is 1:1000
 	*/
-	let xAxisimgcaleValue = randomWidthValue/1000;
-	let yAxisimgcaleValue = randomLengthValue/1000;
+	let xAxisimgcaleValue = randomWidthValue / 1000;
+	let yAxisimgcaleValue = randomLengthValue / 1000;
 
 	polystyreneBox = Bodies.rectangle(randomXCord, 100, randomWidthValue,
 		randomLengthValue, {
@@ -197,13 +197,13 @@ function spawnBlock () {
 		frictionAir: 0.01,
 		frictionStatic: 0.5,
 
-        render: {
-            sprite: {
-                texture: "assets/img/polystyrene.png",
-                xScale: xAxisimgcaleValue,
-                yScale: yAxisimgcaleValue
-            }
-        },
+		render: {
+			sprite: {
+				texture: "assets/img/polystyrene.png",
+				xScale: xAxisimgcaleValue,
+				yScale: yAxisimgcaleValue
+			}
+		},
 
 		collisionFilter: {
 			group: 0,
@@ -229,11 +229,32 @@ $('#spawnBtn').on('mousemove', function mouseState() {
 	i++
 	if (i % 30 == 0) {
 		console.log('spawm')
-		spawnBlock ()
+		spawnBlock()
 	}
 });
 
-$('#resetBtn').on('click', function(){
+let value = 0;
+let interval;
+
+function update() {
+  value++;
+  console.log(value)
+  if (value % 2 == 0) {
+	  spawnBlock()
+  }
+}
+
+function down() {
+  value = 0;
+  interval = setInterval(update, 100);
+}
+
+function up() {
+  clearInterval(interval);
+}
+
+
+$('#resetBtn').on('click', function () {
 	window.location.reload();
 });
 
@@ -248,7 +269,7 @@ let mouse = Mouse.create(render.canvas),
 			}
 		}
 	}
-);
+	);
 
 /*
 The compactor is only an image on the canvas. To give it structure, shapes are
@@ -347,14 +368,14 @@ let compactedPolystyrene = Bodies.rectangle(320, 490, 150, 15, {
 			xScale: 0.146,
 			yScale: 0.014
 		}
-  },
+	},
 	density: 0.0006,
 	restitution: 0,
 	friction: 0.0006,
 	frictionAir: 0.002,
 	frictionStatic: 0.01,
 	isStatic: false
-	
+
 });
 
 // create information arrow
@@ -385,7 +406,7 @@ $('#compactBtn').on('click', function () {
 
 // Add all of the bodies to the world
 World.add(engine.world, [
-	groundLeft, groundCenter, groundRight, compactedPolystyrene, compactor, 
+	groundLeft, groundCenter, groundRight, compactedPolystyrene, compactor,
 	mouseConstraint, powerGaugeComponent, shaftUpperComponent,
 	shaftLowerComponent, engineComponent, trapDoorComponent,
 	leftContainerComponent, rightContainerComponent, powerSwitchComponent,
