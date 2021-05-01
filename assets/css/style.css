@@ -51,6 +51,8 @@ img {
 	position: fixed;
 	left: 0;
 	bottom: 0;
+	padding: 20px;
+	background-color: #0f9;
 }
 
 #resetBtn {

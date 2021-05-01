@@ -163,11 +163,10 @@ let greenPipe = Bodies.rectangle(480, 50, 0.01, 0.01, {
 	},
 });
 
-let polystyreneBoxes = [];
-let polystyreneBox;
+let boxQuantity = 0;
 
 // Function to generate random sized polystyrene blocks
-$("#spawnBtn").click(function() {
+function spawnBlock () {
 	/* 
 	Generate a random number for the length and width of the polystyrene
 	blocks. A value of 10 is added to the number to ensure the blocks are large
@@ -220,7 +219,18 @@ $("#spawnBtn").click(function() {
 	]);
 
 	World.remove(engine.world, [greenPipe, brick2, brick3, brick4, brick5]);
-	polystyreneBoxes.push(polystyreneBox);
+
+	boxQuantity++
+	console.log(boxQuantity)
+};
+
+let i = 0
+$('#spawnBtn').on('mousemove', function mouseState() {
+	i++
+	if (i % 30 == 0) {
+		console.log('spawm')
+		spawnBlock ()
+	}
 });
 
 $('#resetBtn').on('click', function(){
