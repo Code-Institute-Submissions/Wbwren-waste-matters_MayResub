@@ -151,7 +151,7 @@ let compactor = Bodies.rectangle(400, 410, 0.01, 0.01, {
 	},
 });
 
-let greenPipe = Bodies.rectangle(480, 50, 0.01, 0.01, {
+let greenPipe = Bodies.rectangle(480, 10, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		visible: true,
@@ -172,8 +172,8 @@ function spawnBlock() {
 	blocks. A value of 10 is added to the number to ensure the blocks are large
 	enough to click easily
 	*/
-	let randomWidthValue = Math.floor((Math.random() * 40) + 20);
-	let randomLengthValue = Math.floor((Math.random() * 90) + 20);
+	let randomWidthValue = Math.floor((Math.random() * 20) + 10);
+	let randomLengthValue = Math.floor((Math.random() * 45) + 10);
 
 	/*
 	Generate a random number for the x-axis coordinate in which the block
@@ -188,7 +188,7 @@ function spawnBlock() {
 	let xAxisimgcaleValue = randomWidthValue / 1000;
 	let yAxisimgcaleValue = randomLengthValue / 1000;
 
-	polystyreneBox = Bodies.rectangle(randomXCord, 100, randomWidthValue,
+	polystyreneBox = Bodies.rectangle(randomXCord, 20, randomWidthValue,
 		randomLengthValue, {
 		isStatic: false,
 		density: 0.1,
@@ -221,24 +221,22 @@ function spawnBlock() {
 	World.remove(engine.world, [greenPipe, brick2, brick3, brick4, brick5]);
 
 	boxQuantity++
-	console.log(boxQuantity)
-};
 
-let i = 0
-$('#spawnBtn').on('mousemove', function mouseState() {
-	i++
-	if (i % 30 == 0) {
-		console.log('spawm')
-		spawnBlock()
-	}
-});
+	// Detect collisions and check if block is out of bounds
+	Matter.Events.on(engine, 'collisionStart', function(event) {
+		if (polystyreneBox.position.x < 400) {
+			console.log('failed')
+		} else if (polystyreneBox.position.x > 567) {
+			console.log('failed')
+		}
+	});
+};
 
 let value = 0;
 let interval;
 
 function update() {
   value++;
-  console.log(value)
   if (value % 2 == 0) {
 	  spawnBlock()
   }
