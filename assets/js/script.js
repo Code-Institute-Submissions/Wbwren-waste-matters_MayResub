@@ -151,14 +151,14 @@ let compactor = Bodies.rectangle(400, 410, 0.01, 0.01, {
 	},
 });
 
-let greenPipe = Bodies.rectangle(480, 10, 0.01, 0.01, {
+let greenPipe = Bodies.rectangle(480, 0, 0.01, 0.01, {
 	isStatic: true,
 	render: {
 		visible: true,
 		sprite: {
 			texture: "assets/img/green-pipe.png",
-			xScale: 0.3,
-			yScale: 0.3
+			xScale: 0.35,
+			yScale: 0.35
 		}
 	},
 });
@@ -230,7 +230,7 @@ checkCoordinates = () => {
 	for (i in polystyreneBoxes) {
 		if (polystyreneBoxes[i].position.x < 420) {
 			console.log('less')
-		} else if (polystyreneBoxes[i].position.x > 548) {
+		} else if (polystyreneBoxes[i].position.x > 551) {
 			console.log('greater')
 		}
 	}
@@ -239,6 +239,16 @@ checkCoordinates = () => {
 // Call checkCoodinates function every second
 setInterval(function(){ checkCoordinates(); }, 1000);
 
+let score = 0
+function incrementScore () {
+	score++
+    $('#scoreContainer').html(
+    `
+    Score: ${score}
+    `
+    );
+}
+
 let value = 0;
 let interval;
 
@@ -246,8 +256,11 @@ function update() {
 	value++;
 	if (value % 2 == 0) {
 		spawnBlock()
+		incrementScore()
 	}
 }
+
+setInterval(function(){ console.log(boxQuantity); }, 100);
 
 function down() {
 	value = 0;
@@ -311,14 +324,14 @@ let engineComponent = Bodies.rectangle(580, 491.5, 70, 40, {
 let leftContainerComponent = Bodies.rectangle(427, 377, 10, 100, {
 	isStatic: true,
 	render: {
-		visible: true
+		visible: false
 	}
 });
 
 let rightContainerComponent = Bodies.rectangle(546, 377, 10, 100, {
 	isStatic: true,
 	render: {
-		visible: true
+		visible: false
 	}
 });
 
