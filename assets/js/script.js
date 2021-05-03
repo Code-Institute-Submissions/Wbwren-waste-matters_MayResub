@@ -163,7 +163,6 @@ let greenPipe = Bodies.rectangle(480, 0, 0.01, 0.01, {
 	},
 });
 
-let boxQuantity = 0;
 
 let polystyreneBoxes = []
 // Function to generate random sized polystyrene blocks
@@ -221,7 +220,6 @@ function spawnBlock() {
 
 	World.remove(engine.world, [greenPipe, brick2, brick3, brick4, brick5]);
 
-	boxQuantity++
 	polystyreneBoxes.push(polystyreneBox)
 };
 
@@ -245,7 +243,7 @@ checkLives = () => {
 		lives = 2
 	} else if (boxesOutOfBounds.size == 2) {
 		lives = 1
-	} else if (boxesOutOfBounds.size == 3) {
+	} else if (boxesOutOfBounds.size >= 3) {
 		lives = 0
 	}
 }
@@ -412,23 +410,43 @@ let compactorForeground = Bodies.rectangle(400, 471, 0.01, 0.01, {
 	},
 });
 
-let compactedPolystyrene = Bodies.rectangle(320, 490, 150, 15, {
-	render: {
-		visible: true,
-		sprite: {
-			texture: "assets/img/polystyrene.png",
-			xScale: 0.146,
-			yScale: 0.014
-		}
-	},
-	density: 0.0006,
-	restitution: 0,
-	friction: 0.0006,
-	frictionAir: 0.002,
-	frictionStatic: 0.01,
-	isStatic: false
+let lengthValue;
+determineQuantityCompacted = () => {
+	if (score == 0) {
+		lengthValue = 0
+	} else if (score < 10) {
+		lengthValue = 50
+	} else if (score < 20) {
+		lengthValue = 100
+	} else if (score < 30) {
+		lengthValue = 150
+	} else if (score < 40) {
+		lengthValue = 200
+	} else if (score >= 40) {
+		lengthValue = 250
+	}
+}
 
-});
+makeCompactedPolystyrene = () => {
+	compactedPolystyrene = Bodies.rectangle(320, 490, lengthValue, 15, {
+		render: {
+			visible: true,
+			sprite: {
+				texture: "assets/img/polystyrene.png",
+				xScale: lengthValue/1000,
+				yScale: 0.014
+			}
+		},
+		density: 0.0006,
+		restitution: 0,
+		friction: 0.0006,
+		frictionAir: 0.002,
+		frictionStatic: 0.01,
+		isStatic: false
+	
+	});
+}
+
 
 // create information arrow
 let arrow = Bodies.rectangle(90, 400, 150, 150, {
@@ -445,11 +463,14 @@ let arrow = Bodies.rectangle(90, 400, 150, 150, {
 
 // Function to turn on compactor
 $('#compactBtn').on('click', function () {
+	determineQuantityCompacted()
+	console.log(lengthValue)
 	World.remove(engine.world, [
 		groundCenter, trapDoorComponent, rightTrapDoor, leftTrapDoor,
 		mouseConstraint
 	]);
-	World.add(engine.world, [arrow]);
+	makeCompactedPolystyrene()
+	World.add(engine.world, [arrow, compactedPolystyrene, compactorForeground]);
 	Body.setVelocity(compactedPolystyrene, { x: -2.7, y: 0 });
 
 	$('#spawnBtn').css('pointer-events', 'none');
@@ -458,7 +479,7 @@ $('#compactBtn').on('click', function () {
 
 // Add all of the bodies to the world
 World.add(engine.world, [
-	groundLeft, groundCenter, groundRight, compactedPolystyrene, compactor,
+	groundLeft, groundCenter, groundRight, compactor,
 	mouseConstraint, powerGaugeComponent, shaftUpperComponent,
 	shaftLowerComponent, engineComponent, trapDoorComponent,
 	leftContainerComponent, rightContainerComponent, powerSwitchComponent,
