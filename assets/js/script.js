@@ -225,19 +225,55 @@ function spawnBlock() {
 	polystyreneBoxes.push(polystyreneBox)
 };
 
+let boxesOutOfBounds = new Set()
+
 // Detect collisions and check if block is out of bounds
 checkCoordinates = () => {
 	for (i in polystyreneBoxes) {
 		if (polystyreneBoxes[i].position.x < 420) {
-			console.log('less')
+			boxesOutOfBounds.add(polystyreneBoxes[i].id)
 		} else if (polystyreneBoxes[i].position.x > 551) {
-			console.log('greater')
+			one = true
+			boxesOutOfBounds.add(polystyreneBoxes[i].id)
 		}
 	}
 };
 
-// Call checkCoodinates function every second
-setInterval(function(){ checkCoordinates(); }, 1000);
+let lives = 3;
+checkLives = () => {
+	if (boxesOutOfBounds.size == 1) {
+		lives = 2
+	} else if (boxesOutOfBounds.size == 2) {
+		lives = 1
+	} else if (boxesOutOfBounds.size == 3) {
+		lives = 0
+	}
+}
+
+lifeLost = () => {
+	if (lives == 2) {
+		$('#livesContainer').html(
+			`
+			Lives: <i class="fas fa-heart"></i> <i class="fas fa-heart"></i>
+			`
+		) 
+	} else if (lives == 1) {
+		$('#livesContainer').html(
+			`
+			Lives: <i class="fas fa-heart"></i>
+			`
+		) 
+	} else if (lives == 0) {
+		$('#livesContainer').html(
+			`
+			Lives:
+			`
+		) 
+	} 
+}
+
+// Call coordinate and life checker functions every second
+setInterval(function(){ checkCoordinates(), checkLives(), lifeLost(); }, 1000);
 
 let score = 0
 function incrementScore () {
@@ -259,8 +295,6 @@ function update() {
 		incrementScore()
 	}
 }
-
-setInterval(function(){ console.log(boxQuantity); }, 100);
 
 function down() {
 	value = 0;

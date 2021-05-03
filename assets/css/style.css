@@ -82,6 +82,10 @@ img {
 	transition: ease-in-out;
 }
 
+#livesContainer i {
+	color: #ff0000;
+}
+
 ul {
 	padding: 0;
 }
