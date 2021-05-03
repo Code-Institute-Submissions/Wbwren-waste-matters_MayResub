@@ -266,7 +266,10 @@ lifeLost = () => {
 			`
 			Lives:
 			`
-		) 
+		)
+		$('#gameOver').css('display', 'inline-block')
+		$('#spawnBtn').css('display', 'none')
+		$('#compactBtn').css('display', 'none')
 	} 
 }
 

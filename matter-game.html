@@ -22,9 +22,13 @@
 
         <!-- Container for all user messages -->
         <div id="messageContainer"></div>
+
+        <!-- Game over container -->
+        <div id="gameOver"><strong>Game over</strong></div>
+
         <!-- Wrapper for buttons -->
         <div id="buttons">
-            <button type="button" onmousedown="down()" onmouseup="up()">
+            <button id='spawnBtn' type="button" onmousedown="down()" onmouseup="up()">
                 Click me!
             </button>            
             <img src="assets/img/lever.png" alt="Lever switch to turn on compactor" id="compactBtn" onclick="this.src ='assets/img/lever-flipped.png', benefitsMessage()">

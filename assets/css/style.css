@@ -86,6 +86,15 @@ img {
 	color: #ff0000;
 }
 
+#gameOver {
+	display: none;
+	position: fixed;
+	top: 50%;
+	right: 50%;
+	color: #ff0000;
+	font-size: 50px;
+}
+
 ul {
 	padding: 0;
 }
