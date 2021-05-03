@@ -165,6 +165,7 @@ let greenPipe = Bodies.rectangle(480, 10, 0.01, 0.01, {
 
 let boxQuantity = 0;
 
+let polystyreneBoxes = []
 // Function to generate random sized polystyrene blocks
 function spawnBlock() {
 	/* 
@@ -221,34 +222,40 @@ function spawnBlock() {
 	World.remove(engine.world, [greenPipe, brick2, brick3, brick4, brick5]);
 
 	boxQuantity++
-
-	// Detect collisions and check if block is out of bounds
-	Matter.Events.on(engine, 'collisionStart', function(event) {
-		if (polystyreneBox.position.x < 400) {
-			console.log('failed')
-		} else if (polystyreneBox.position.x > 567) {
-			console.log('failed')
-		}
-	});
+	polystyreneBoxes.push(polystyreneBox)
 };
+
+// Detect collisions and check if block is out of bounds
+checkCoordinates = () => {
+	for (i in polystyreneBoxes) {
+		if (polystyreneBoxes[i].position.x < 420) {
+			console.log('less')
+		} else if (polystyreneBoxes[i].position.x > 548) {
+			console.log('greater')
+		}
+	}
+};
+
+// Call checkCoodinates function every second
+setInterval(function(){ checkCoordinates(); }, 1000);
 
 let value = 0;
 let interval;
 
 function update() {
-  value++;
-  if (value % 2 == 0) {
-	  spawnBlock()
-  }
+	value++;
+	if (value % 2 == 0) {
+		spawnBlock()
+	}
 }
 
 function down() {
-  value = 0;
-  interval = setInterval(update, 100);
+	value = 0;
+	interval = setInterval(update, 100);
 }
 
 function up() {
-  clearInterval(interval);
+	clearInterval(interval);
 }
 
 
@@ -304,14 +311,14 @@ let engineComponent = Bodies.rectangle(580, 491.5, 70, 40, {
 let leftContainerComponent = Bodies.rectangle(427, 377, 10, 100, {
 	isStatic: true,
 	render: {
-		visible: false
+		visible: true
 	}
 });
 
 let rightContainerComponent = Bodies.rectangle(546, 377, 10, 100, {
 	isStatic: true,
 	render: {
-		visible: false
+		visible: true
 	}
 });
 
