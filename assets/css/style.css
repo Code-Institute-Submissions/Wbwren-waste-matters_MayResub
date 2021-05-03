@@ -86,7 +86,7 @@ img {
 	color: #ff0000;
 }
 
-#gameOver {
+#winLose {
 	display: none;
 	position: fixed;
 	top: 50%;

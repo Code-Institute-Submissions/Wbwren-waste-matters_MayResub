@@ -267,7 +267,7 @@ lifeLost = () => {
 			Lives:
 			`
 		)
-		$('#gameOver').css('display', 'inline-block')
+		$('#winLose').css('display', 'inline-block')
 		$('#spawnBtn').css('display', 'none')
 		$('#compactBtn').css('display', 'none')
 	} 
@@ -467,7 +467,6 @@ let arrow = Bodies.rectangle(90, 400, 150, 150, {
 // Function to turn on compactor
 $('#compactBtn').on('click', function () {
 	determineQuantityCompacted()
-	console.log(lengthValue)
 	World.remove(engine.world, [
 		groundCenter, trapDoorComponent, rightTrapDoor, leftTrapDoor,
 		mouseConstraint
@@ -475,6 +474,12 @@ $('#compactBtn').on('click', function () {
 	makeCompactedPolystyrene()
 	World.add(engine.world, [arrow, compactedPolystyrene, compactorForeground]);
 	Body.setVelocity(compactedPolystyrene, { x: -2.7, y: 0 });
+
+	$('#winLose').html(
+		`
+		<div>Success!<br>Score: ${score}</div>
+		`
+	).css({'display': 'inline-block', 'color': 'white'})
 
 	$('#spawnBtn').css('pointer-events', 'none');
 	$('#compactBtn').css('pointer-events', 'none');
