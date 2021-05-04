@@ -420,16 +420,22 @@ let lengthValue;
 determineQuantityCompacted = () => {
 	if (score == 0) {
 		lengthValue = 0
+	} else if (score < 5) {
+		lengthValue = 25
 	} else if (score < 10) {
 		lengthValue = 50
+	} else if (score < 15) {
+		lengthValue = 75
 	} else if (score < 20) {
 		lengthValue = 100
-	} else if (score < 30) {
+	} else if (score > 25) {
+		lengthValue = 125
+	} else if (score > 30) {
 		lengthValue = 150
-	} else if (score < 40) {
-		lengthValue = 200
+	} else if (score > 35) {
+		lengthValue = 175
 	} else if (score >= 40) {
-		lengthValue = 250
+		lengthValue = 200
 	}
 }
 
