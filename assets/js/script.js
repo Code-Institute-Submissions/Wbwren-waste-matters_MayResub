@@ -443,7 +443,7 @@ makeCompactedPolystyrene = () => {
 				yScale: 0.014
 			}
 		},
-		density: 0.0006,
+		density: 0.005,
 		restitution: 0,
 		friction: 0.0006,
 		frictionAir: 0.002,
