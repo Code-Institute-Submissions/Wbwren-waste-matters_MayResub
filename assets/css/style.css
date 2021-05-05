@@ -131,12 +131,24 @@ Credit to Web Dev Simplified
 	position: fixed
 }
 
-#livesContainer {
-	top: 3rem;
+#scoreContainer {
+	top: 7rem;
 }
 
 #modalBtn {
-	top: 6rem;
+	top: 10rem;
+    background-color: #ff0000;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+}
+
+#modalBtn:hover {
+    text-decoration: none;
+    color: #ff0000;
+    background-color: #ffffff;
 }
 
 #objective {
@@ -152,28 +164,32 @@ Credit to Web Dev Simplified
     width: 100vw;
     display: block;
     margin: 0;
+    text-align: center;
 }
 
 #spawnBtn {
     position: fixed;
-    left: 0;
+    left: 5px;
     bottom: 0;
-    padding: 20px;
-    background-color: #0f9;
+    font-size: 5rem;
 }
 
 #resetBtn {
+    font-size: 5rem;
     position: fixed;
-    right: 0;
+    right: 5px;
     bottom: 0;
 }
 
 #compactBtn {
-    position: fixed;
     bottom: 0;
-    margin: auto;
-    left: 0;
-    right: 0;
+    font-size: 5rem;
+    text-align: center;
+}
+
+i:hover {
+    text-decoration: none;
+    color: #ff0000;
 }
 
 #livesContainer i {
@@ -207,20 +223,6 @@ ul li {
 	margin-left: 1rem;
 }
 
-#spawnBtnArrow,
-#compactBtnArrow {
-    position: fixed;
-    bottom: 0;
-    left: 7vw;
-    color: #ff0000;
-    display: none;
-    font-size: 4vw;
-}
-
-#compactBtnArrow {
-    left: 55vw;
-}
-
 h2 {
     font-size: 2vw;
 }
@@ -230,7 +232,7 @@ a {
     border-radius: 5px;
     text-decoration: none;
     color: #ffffff;
-    padding: 20px;
+    padding: 15px;
 }
 
 a:hover {

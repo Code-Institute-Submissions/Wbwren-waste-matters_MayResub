@@ -505,12 +505,19 @@ $('#compactBtn').on('click', function() {
     World.add(engine.world, [compactedPolystyrene, compactorForeground]);
     Body.setVelocity(compactedPolystyrene, { x: -2.7, y: 0 });
 
-    $('#winLose').html(
-        `
-		<div>Success!<br>Score: ${score}</div>
-		`
-    ).css({ 'display': 'inline-block', 'color': 'white' })
-
+	if (score == 0) {
+		$('#winLose').html(
+			`
+			<div>Score: ${score}</div>
+			`
+		).css({ 'display': 'inline-block', 'color': 'white' })
+	} else if (score > 0) {
+		$('#winLose').html(
+			`
+			<div>Success!<br>Score: ${score}</div>
+			`
+		).css({ 'display': 'inline-block', 'color': 'white' })
+	}
     $('#spawnBtn').css('pointer-events', 'none');
     $('#compactBtn').css('pointer-events', 'none');
 });

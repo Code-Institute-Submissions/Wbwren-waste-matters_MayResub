@@ -26,15 +26,15 @@
     </header>
     <main>
 
+        <!-- Lives container -->
+        <div id="livesContainer">Lives: <i class="fas fa-heart"></i> <i class="fas fa-heart"></i> <i
+            class="fas fa-heart"></i></div>
+
         <!-- Score container -->
         <div id="scoreContainer">Score: 0</div>
 
-        <!-- Lives container -->
-        <div id="livesContainer">Lives: <i class="fas fa-heart"></i> <i class="fas fa-heart"></i> <i
-                class="fas fa-heart"></i></div>
-
         <!-- Modal for user instruction -->
-        <button id="modalBtn" data-modal-target="#modal">Instructions</button>
+        <button id="modalBtn" data-modal-target="#modal"><i class="fas fa-info"></i> Instructions</button>
         <div class="modal" id="modal">
             <div class="modal-header">
                 <div class="title">How to play</div>
@@ -62,14 +62,11 @@
 
         <!-- Wrapper for buttons -->
         <div id="buttons">
-            <button id='spawnBtn' type="button" onmousedown="down()" onmouseup="up()">
-                Click me!
-            </button>
-            <img src="assets/img/lever.png" alt="Lever switch to turn on compactor" id="compactBtn"
-                onclick="this.src ='assets/img/lever-flipped.png', benefitsMessage()">
-            <img src="assets/img/refresh-arrow.png" alt="Button to reset the world" id="resetBtn">
-            <div id="spawnBtnArrow"><i class="fas fa-arrow-left"></i></div>
-            <div id="compactBtnArrow"><i class="fas fa-arrow-left"></i></div>
+            <div id='spawnBtn' onmousedown="down()" onmouseup="up()">
+                <i class="fas fa-caret-square-down"></i>
+            </div>
+            <div><span id="compactBtn"><i class="fas fa-compress"></i></span></div>
+            <div id="resetBtn"><i class="fas fa-redo-alt"></i></div>
         </div>
     </main>
     <script src="assets/js/matter.js"></script>
