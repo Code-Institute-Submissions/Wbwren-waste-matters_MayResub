@@ -211,6 +211,7 @@ This project is an interactive game built on the 2d physics engine matter.js. It
 * Lever image: https://www.kissclipart.com/cartoon-lever-png-clipart-computer-icons-clip-art-1f8vxo/s
 * Refresh-arrow: http://clipart-library.com/clipart/8T68KdEGc.html
 * Green pipe: https://publicdomainvectors.org/en/free-clipart/Green-pipe/39369.html
+* Modal: https://www.youtube.com/watch?v=MBaw_6cPmAw
 
 ### Acknowledgments
 * [Stackoverflow](https://stackoverflow.com/) as a resource for learning and troubleshooting.

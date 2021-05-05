@@ -1,174 +1,257 @@
 /* Prevents scroll on smaller screens */
+
 html,
 body {
-	overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 body {
-	position: relative;
-	background-color: #14151F;
-	font-family: 'Roboto Mono', monospace;
-	color: #fff;
+    position: relative;
+    background-color: #14151F;
+    font-family: 'Roboto Mono', monospace;
+    color: #fff;
 }
 
 nav {
-	float: left;
+    float: left;
 }
 
 nav a {
-	background-color: #14151F;
+    background-color: #14151F;
 }
 
 li {
-	display: inline;
-  }
+    display: inline;
+}
 
 /* Position the matter.js canvas */
+
 canvas {
-	width: 100vw;
-	max-width: 120vh;
-	max-height: 100vh;
-	display: block;
-	margin: auto;
-	top: 0;
+    width: 100vw;
+    max-width: 120vh;
+    max-height: 100vh;
+    display: block;
+    margin: auto;
+    top: 0;
 }
 
 img {
-	height: 5vw;
-	display: inline-block;
-	margin: 0;
+    height: 5vw;
+    display: inline-block;
+    margin: 0;
+}
+
+
+/* 
+User instruction modal 
+Credit to Web Dev Simplified
+*/
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+    color: #14151F;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+}
+
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button {
+	font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+	outline: none;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 500ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000080;
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
 }
 
 #buttons {
-	position: fixed;
-	bottom: 0;
-	width: 100vw;
-	display: block;
-	margin: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: block;
+    margin: 0;
 }
 
 #spawnBtn {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	padding: 20px;
-	background-color: #0f9;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    background-color: #0f9;
 }
 
 #resetBtn {
-	position: fixed;
-	right: 0;
-	bottom: 0;
+    position: fixed;
+    right: 0;
+    bottom: 0;
 }
 
 #compactBtn {
-	position: fixed;
-	bottom: 0;
-	margin: auto;
-	left: 0;
-	right: 0;
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
 }
 
 #messageContainer {
-	display: inline-block;
-	position: fixed;
-	top: 1vh;
-	right: 2vw;
-	text-align: left;
-	max-width: 25vw;
-	color: #f0f8ff;
-	pointer-events: all;
-	font-size: 0.7vw;
-	transition: ease-in-out;
+    display: inline-block;
+    position: fixed;
+    top: 1vh;
+    right: 2vw;
+    text-align: left;
+    max-width: 25vw;
+    color: #f0f8ff;
+    pointer-events: all;
+    font-size: 0.7vw;
+    transition: ease-in-out;
 }
 
 #livesContainer i {
-	color: #ff0000;
+    color: #ff0000;
 }
 
 #slowMotion {
-	padding: 1rem;
-	background-color: #0f9;
-	top: 50%;
-	display: inline;
-	position: fixed;
-	color: #14151F;
+    padding: 1rem;
+    background-color: #0f9;
+    top: 50%;
+    display: inline;
+    position: fixed;
+    color: #14151F;
 }
 
 #winLose {
-	display: none;
-	position: fixed;
-	top: 50%;
-	right: 50%;
-	color: #ff0000;
-	font-size: 50px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    color: #ff0000;
+    font-size: 50px;
 }
 
 ul {
-	padding: 0;
+	list-style-type: disc;
+}
+
+ul li {
+	display: list-item;
+	margin-left: 1rem;
 }
 
 #spawnBtnArrow,
 #compactBtnArrow {
-	position: fixed;
-	bottom: 0;
-	left: 7vw;
-	color: #ff0000;
-	display: none;
-	font-size: 4vw;
+    position: fixed;
+    bottom: 0;
+    left: 7vw;
+    color: #ff0000;
+    display: none;
+    font-size: 4vw;
 }
 
 #compactBtnArrow {
-	left: 55vw;
+    left: 55vw;
 }
 
 h2 {
-	font-size: 2vw;
+    font-size: 2vw;
 }
 
 a {
-	background-color: #ff0000;
-	border-radius: 5px;
-	text-decoration: none;
-	color: #ffffff;
-	padding: 20px;
+    background-color: #ff0000;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 20px;
 }
 
 a:hover {
-	text-decoration: none;
-	color: #ff0000;
-	background-color: #ffffff;
+    text-decoration: none;
+    color: #ff0000;
+    background-color: #ffffff;
 }
 
+
 /* Media queries */
+
 @media only screen and (max-width: 320px) {
-	img {
-		height: 30vw;
-		display: inline-block;
-		margin: 0;
-	}
+    img {
+        height: 30vw;
+        display: inline-block;
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 375px) {
-	img {
-		height: 28vw;
-		display: inline-block;
-		margin: 0;
-	}
+    img {
+        height: 28vw;
+        display: inline-block;
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 425px) {
-	img {
-		height: 25vw;
-		display: inline-block;
-		margin: 0;
-	}
+    img {
+        height: 25vw;
+        display: inline-block;
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 720px) {
-	img {
-		height: 25vw;
-		display: inline-block;
-		margin: 0;
-	}
+    img {
+        height: 25vw;
+        display: inline-block;
+        margin: 0;
+    }
 }
