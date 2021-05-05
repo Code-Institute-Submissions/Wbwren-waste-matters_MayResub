@@ -15,6 +15,15 @@
 </head>
 
 <body onload="introMessage(); fadeInFadeOut()">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="matter-game.html">Interactive Game</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
 
         <!-- Score container -->
@@ -25,16 +34,16 @@
                 class="fas fa-heart"></i></div>
 
         <!-- Modal for user instruction -->
-        <button data-modal-target="#modal">Instructions</button>
+        <button id="modalBtn" data-modal-target="#modal">Instructions</button>
         <div class="modal" id="modal">
             <div class="modal-header">
                 <div class="title">How to play</div>
                 <button data-close-button class="close-button">&times;</button>
             </div>
             <div class="modal-body">
+                <p id="objective"><strong>Goal: fill the compactor with as many polystyrene blocks as you
+                    can.</strong></p>
                 <ul>
-                    <li id="objective"><strong>Goal: fill the compactor with as many polystyrene blocks as you
-                            can.</strong></li><br>
                     <li>Click and hold the P button to spawn blocks.</li><br>
                     <li>Click and drag the blocks to stack as high as you can.</li><br>
                     <li>You have 3 lives, a life will be taken if a block falls outside of the compactor.</li><br>
@@ -47,9 +56,6 @@
             </div>
         </div>
         <div id="overlay"></div>
-
-        <!-- Container for all user messages -->
-        <div id="messageContainer"></div>
 
         <!-- Game over container -->
         <div id="winLose"><strong>Game over</strong></div>

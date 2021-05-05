@@ -24,14 +24,24 @@ li {
     display: inline;
 }
 
+header {
+	display: inline-block;
+}
+
+header ul li {
+	display: list-item;
+	list-style-type: none;
+	display: inline-block;
+}
+
 /* Position the matter.js canvas */
 
 canvas {
     width: 100vw;
     max-width: 120vh;
     max-height: 100vh;
-    display: block;
     margin: auto;
+	display: block;
     top: 0;
 }
 
@@ -115,6 +125,27 @@ Credit to Web Dev Simplified
     pointer-events: all;
 }
 
+#scoreContainer, #livesContainer, #modalBtn {
+	right: 2rem;
+	display: block;
+	position: fixed
+}
+
+#livesContainer {
+	top: 3rem;
+}
+
+#modalBtn {
+	top: 6rem;
+}
+
+#objective {
+	display: block;
+	margin: 0;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
 #buttons {
     position: fixed;
     bottom: 0;
@@ -143,19 +174,6 @@ Credit to Web Dev Simplified
     margin: auto;
     left: 0;
     right: 0;
-}
-
-#messageContainer {
-    display: inline-block;
-    position: fixed;
-    top: 1vh;
-    right: 2vw;
-    text-align: left;
-    max-width: 25vw;
-    color: #f0f8ff;
-    pointer-events: all;
-    font-size: 0.7vw;
-    transition: ease-in-out;
 }
 
 #livesContainer i {
