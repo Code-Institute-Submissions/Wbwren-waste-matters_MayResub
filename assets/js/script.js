@@ -306,10 +306,6 @@ function up() {
 	clearInterval(interval);
 }
 
-$('#slowMotion').on('click', function () {
-		engine.timing.timeScale = 0.1;
-	});
-
 $('#resetBtn').on('click', function () {
 	window.location.reload();
 });
