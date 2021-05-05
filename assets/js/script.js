@@ -459,20 +459,6 @@ makeCompactedPolystyrene = () => {
 	});
 }
 
-
-// create information arrow
-let arrow = Bodies.rectangle(90, 400, 150, 150, {
-	render: {
-		visible: true,
-		sprite: {
-			texture: "assets/img/arrow.png",
-			xScale: 0.19,
-			yScale: 0.19
-		}
-	},
-	isStatic: true
-});
-
 // Function to turn on compactor
 $('#compactBtn').on('click', function () {
 	determineQuantityCompacted()
@@ -481,7 +467,7 @@ $('#compactBtn').on('click', function () {
 		mouseConstraint
 	]);
 	makeCompactedPolystyrene()
-	World.add(engine.world, [arrow, compactedPolystyrene, compactorForeground]);
+	World.add(engine.world, [compactedPolystyrene, compactorForeground]);
 	Body.setVelocity(compactedPolystyrene, { x: -2.7, y: 0 });
 
 	$('#winLose').html(
