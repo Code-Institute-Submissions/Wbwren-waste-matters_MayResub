@@ -222,7 +222,6 @@ Credit to Web Dev Simplified
     -ms-user-select: none;
     user-select: none;
     -ms-touch-select: none;
-    -ms-touch-action: none;
 }
 
 #resetBtn {
