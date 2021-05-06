@@ -38,7 +38,7 @@ Waste matters Ltd. offers waste and recycling solutions to Irish businesses. The
 * As a user, I would like the user experience on the website to be
 intuitive.
 
-    * The interactive demo guides users using [clear instructions](https://github.com/Wbwren/waste-matters/blob/master/assets/img/user-instruction-arrow.png)
+    * The interactive demo guides users using [clear instructions](https://github.com/Wbwren/waste-matters/blob/master/assets/img/user-instructions.png)
 
 * As a user, I want to learn about polystyrene compactors and how
 they work.
@@ -47,7 +47,7 @@ they work.
 
 * As a user, I want to learn about polystyrene recycling in an engaging manor.
 
-    * The interactive demo requires user engagement while displaying the information in a [clear manor](https://github.com/Wbwren/waste-matters/blob/master/assets/img/user-notification.png)
+    * The interactive demo requires user engagement while the website provides [key information](https://github.com/Wbwren/waste-matters/blob/master/assets/img/key-info.png)
 
 * As a user, I want my experience on the website to be enjoyable.
 
@@ -104,28 +104,14 @@ This project is an interactive game built on the 2d physics engine matter.js. It
 
 * JavaScript was passed through the linter jshint with no warnings
 ### Functionality test
-| Num | Test                                                                                                                      | Action                                             | Outcome Image                                                                                                                                                 | Result | Notes                                          |
-|-----|---------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|------------------------------------------------|
-| 1   | On page-load a user notification appears                                                                                  | Load page on devices with a variety of resolutions | [Image of user notification](https://github.com/Wbwren/waste-matters/blob/master/assets/img/user-notification.png)                                            | Pass   |                                                |
-| 2   | The 'next' button makes a user instruction arrow appear                                                                   | Click next button                                  | [Image of user instruction arrow](https://github.com/Wbwren/waste-matters/blob/master/assets/img/user-instruction-arrow.png)                                       | Pass   |                                                |
-| 3   | The 'P' button when clicked, moves the user instruction arrow, spawns a polystyrene block and presents a new user message | Click spawn button                                 | [Image of user instruction arrow, polystyrene block and new message](https://github.com/Wbwren/waste-matters/blob/master/assets/img/spawn-button-outcome.png) | Pass   |                                                |
-| 4   | The 'P' button when clicked immediately after next button behaves as expected                                             | Click spawn button immediately after next button   | [Image of user instruction arrow frozen on spawn button](https://github.com/Wbwren/waste-matters/blob/master/assets/img/user-instruction-arrow-frozen.png)   | Fail   | User instruction arrow freezes on spawn button |
-| 5   | The compactor switch ejects compacted polystyrene from the machine                                                        | Click compaction switch                            | [Image of compacted polystyrene ejected from the machine](https://github.com/Wbwren/waste-matters/blob/master/assets/img/compacted-polystyrene-ejected.png)   | Pass   |                                                |
-| 6   | The compactor switch triggers the final user message                                                                      | Click compaction switch                            | [Image of final user message](https://github.com/Wbwren/waste-matters/blob/master/assets/img/final-user-message.png)                                          | Pass   |                                                |
-| 7   | The 'Learn more' button when clicked opens in a separate tab and brings users to wastematters.ie                          | Click Learn more button                            | [Image of wastematters.ie opening in a new tab](https://github.com/Wbwren/waste-matters/blob/master/assets/img/wastematters.ie-opening-new-tab.png)           | Pass   |                                                |
-<br>
-
-### Problems during development
-| Num 	| Problem                                                                                                        	| Fix                                                                                                                                                                                                                           	|
-|-----	|----------------------------------------------------------------------------------------------------------------	|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| 1   	| Textures not appearing on matter.js shapes                                                                     	| Disable wireframes under render.options.wireframes                                                                                                                                                                            	|
-| 2   	| Polystyrene blocks not appearing behind the compactor image in the canvas (3D effect)                          	| The order in which you add objects to the world determines the z-index. Adding the foreground image of the compactor after the polystyrene blocks allows the blocks to appear behind the image, giving the desired 3D effect. 	|
-| 3   	| When user creates a polystyrene block, they appear in-front of the                                             	| Use add to world method within the polystyrene creation function and re-add                                                                                                                                                   	|
-|     	| images, giving no 3D effect.                                                                                   	| the images on each call.                                                                                                                                                                                                      	|
-| 4   	| On-screen messages were interfering with the mouse drag function                                               	| Add a style attribute of 'pointer-events: none;' to the message div                                                                                                                                                           	|
-|     	| [Image of mouse drag bug](https://github.com/Wbwren/waste-matters/blob/master/assets/img/mouse-drag-bug.png) 	| [Image of mouse drag bug fix](https://github.com/Wbwren/waste-matters/blob/master/assets/img/mouse-drag-bug-fix.png)                                                                                                        	|
-| 5   	| Could not get vertices to work correctly on matter.js                                                          	| This problem was not resolved.                                                                                                                                                                                                	|
-|     	| [Image of vertices bug](https://github.com/Wbwren/waste-matters/blob/master/assets/img/vertices-bug.png)     	|                                                                                                                                                                                                                               	|
+| Num | Test                                                                         | Action                              | Outcome image                                                                                                                        | Result |
+|-----|------------------------------------------------------------------------------|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|--------|
+| 1   | Navigation bar links work correctly                                          | Click on each nav icon              | [Image of navigation bar working](https://github.com/Wbwren/waste-matters/blob/master/assets/img/navbar.png)                         | Pass   |
+| 2   | The spawn button on the interactive game spawns blocks when pressed and held | Click and hold spawn button         | [Image of spawn button working](https://github.com/Wbwren/waste-matters/blob/master/assets/img/spawn-button.png.)                     | Pass   |
+| 3   | The compact button compacts the blocks and ejects a compacted block          | Click compact button                | [Image of compact button working](https://github.com/Wbwren/waste-matters/blob/master/assets/img/compact-button.png)                 | Pass   |
+| 4   | The instructions button displays the instructions modal when clicked         | Click instructions button           | [Image of user instruction modal working](https://github.com/Wbwren/waste-matters/blob/master/assets/img/user-instruction-modal.png) | Pass   |
+| 5   | The contact form does not a blank submission                                 | Attempt to submit blank form        | [Image of form failing to submit while blank](https://github.com/Wbwren/waste-matters/blob/master/assets/img/blank-form.png)         | Pass   |
+| 6   | The contact form inputs only accept valid inputs                             | Attempt to enter invalid data types | [Image of form requiring correct data format](https://github.com/Wbwren/waste-matters/blob/master/assets/img/data-form.png)          | Pass   |
 <br>
 
 ### Browser Compatibility
@@ -141,8 +127,6 @@ This project is an interactive game built on the 2d physics engine matter.js. It
 * Chrome developer tools was used to test a wide variety of device sizes and resolutions.
 
 * The website has been tested on an iPhone 5, Samsung Galaxy s10, Acer swift 3 and a desktop PC with a 1080p and 4k monitor.
-
-* [Am I responsive image](https://github.com/Wbwren/waste-matters/blob/master/assets/img/am-i-responsive.png)
 
 ### Unresolved Bugs
 
