@@ -238,6 +238,12 @@ a:hover {
 
 /* Media queries */
 
+@media only screen and (max-width: 900px) {
+    #spawnBtn, #resetBtn, #compactBtn {
+        font-size: 2.5rem;
+    }
+}
+
 @media only screen and (max-width: 690px) {
     canvas {
         width: inherit;
@@ -255,7 +261,7 @@ a:hover {
     }
 
     #livesContainer {
-        bottom: 28vh;
+        bottom: 30vh;
     }
     
     #scoreContainer {
@@ -265,10 +271,38 @@ a:hover {
 
     #modalBtn {
         top: inherit;
-        bottom: 17vh;
+        bottom: 13vh;
     }
 
     #spawnBtn, #resetBtn, #compactBtn {
         font-size: 2.5rem;
+    }
+
+    a {
+        padding: 10px;
+        font-size: .5rem;
+        text-align: center;
+    }
+
+    header ul {
+        padding: 0;
+        display: block;
+        color: blue;
+    }
+}
+
+@media only screen and (max-height: 415px) {
+    #livesContainer {
+        bottom: 47vh;
+    }
+    
+    #scoreContainer {
+        top: inherit;
+        bottom: 40vh;
+    }
+
+    #modalBtn {
+        top: inherit;
+        bottom: 25vh;
     }
 }
