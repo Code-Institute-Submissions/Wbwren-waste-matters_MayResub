@@ -304,6 +304,12 @@ a:hover {
         left: 15%;
         font-size: 1rem;
     }
+
+    .modal {
+        white-space: normal;
+        text-align: left;
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-height: 415px) {
@@ -319,6 +325,32 @@ a:hover {
     #modalBtn {
         top: inherit;
         bottom: 25vh;
+    }
+
+    .modal ul {
+        font-size: .75rem;
+    }
+
+    #objective {
+        font-size: 1rem;
+    }
+
+    .modal-header .title {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .modal ul {
+        font-size: .75rem;
+    }
+
+    #objective {
+        font-size: 1rem;
+    }
+
+    .modal-header .title {
+        font-size: 1rem;
     }
 }
 
