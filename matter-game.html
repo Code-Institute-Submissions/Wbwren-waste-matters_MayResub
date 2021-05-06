@@ -26,36 +26,38 @@
     </header>
     <main>
 
-        <!-- Lives container -->
-        <div id="livesContainer">Lives: <i class="fas fa-heart"></i> <i class="fas fa-heart"></i> <i
-            class="fas fa-heart"></i></div>
+        <div id="statsContainer">
+            <!-- Lives container -->
+            <div id="livesContainer">Lives: <i class="fas fa-heart"></i> <i class="fas fa-heart"></i> <i
+                class="fas fa-heart"></i></div>
 
-        <!-- Score container -->
-        <div id="scoreContainer">Score: 0</div>
+            <!-- Score container -->
+            <div id="scoreContainer">Score: 0</div>
 
-        <!-- Modal for user instruction -->
-        <button id="modalBtn" data-modal-target="#modal"><i class="fas fa-info"></i> Instructions</button>
-        <div class="modal" id="modal">
-            <div class="modal-header">
-                <div class="title">How to play</div>
-                <button data-close-button class="close-button">&times;</button>
+            <!-- Modal for user instruction -->
+            <button id="modalBtn" data-modal-target="#modal"><i class="fas fa-info"></i> Instructions</button>
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                    <div class="title">How to play</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p id="objective"><strong>Goal: fill the compactor with as many polystyrene blocks as you
+                        can.</strong></p>
+                    <ul>
+                        <li>Click and hold the P button to spawn blocks.</li><br>
+                        <li>Click and drag the blocks to stack as high as you can.</li><br>
+                        <li>You have 3 lives, a life will be taken if a block falls outside of the compactor.</li><br>
+                        <li>When you think you have the compactor as much as you can, flip the compact switch to save your
+                            score!</li><br>
+                        <li>Click the reset button to play again.</li>
+                    </ul>
+                    <br><br>
+
+                </div>
             </div>
-            <div class="modal-body">
-                <p id="objective"><strong>Goal: fill the compactor with as many polystyrene blocks as you
-                    can.</strong></p>
-                <ul>
-                    <li>Click and hold the P button to spawn blocks.</li><br>
-                    <li>Click and drag the blocks to stack as high as you can.</li><br>
-                    <li>You have 3 lives, a life will be taken if a block falls outside of the compactor.</li><br>
-                    <li>When you think you have the compactor as much as you can, flip the compact switch to save your
-                        score!</li><br>
-                    <li>Click the reset button to play again.</li>
-                </ul>
-                <br><br>
-
-            </div>
+            <div id="overlay"></div>
         </div>
-        <div id="overlay"></div>
 
         <!-- Game over container -->
         <div id="winLose"><strong>Game over</strong></div>

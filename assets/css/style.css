@@ -37,19 +37,13 @@ header ul li {
 /* Position the matter.js canvas */
 
 canvas {
-    width: 100vw;
-    max-width: 120vh;
-    max-height: 100vh;
+    max-width: 100vw;
+    max-height: 75vh;
     margin: auto;
-	display: block;
+	display: flex;
     top: 0;
 }
 
-img {
-    height: 5vw;
-    display: inline-block;
-    margin: 0;
-}
 
 
 /* 
@@ -244,34 +238,37 @@ a:hover {
 
 /* Media queries */
 
-@media only screen and (max-width: 320px) {
-    img {
-        height: 30vw;
-        display: inline-block;
-        margin: 0;
+@media only screen and (max-width: 690px) {
+    canvas {
+        width: inherit;
     }
-}
 
-@media only screen and (max-width: 375px) {
-    img {
-        height: 28vw;
-        display: inline-block;
-        margin: 0;
+    #statsContainer {
+        display: block;
+        left: 50%;
+        position: fixed;
+        bottom: 10rem;
+        width: 100%;
+        height: 20%;
+        white-space: nowrap;
+        text-align: center;
     }
-}
 
-@media only screen and (max-width: 425px) {
-    img {
-        height: 25vw;
-        display: inline-block;
-        margin: 0;
+    #livesContainer {
+        bottom: 28vh;
     }
-}
+    
+    #scoreContainer {
+        top: inherit;
+        bottom: 25vh;
+    }
 
-@media only screen and (max-width: 720px) {
-    img {
-        height: 25vw;
-        display: inline-block;
-        margin: 0;
+    #modalBtn {
+        top: inherit;
+        bottom: 17vh;
+    }
+
+    #spawnBtn, #resetBtn, #compactBtn {
+        font-size: 2.5rem;
     }
 }
