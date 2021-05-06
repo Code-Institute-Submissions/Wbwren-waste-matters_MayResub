@@ -30,13 +30,13 @@ li {
 }
 
 header {
-	display: inline-block;
+    display: inline-block;
 }
 
 header ul li {
-	display: list-item;
-	list-style-type: none;
-	display: inline-block;
+    display: list-item;
+    list-style-type: none;
+    display: inline-block;
 }
 
 h2 {
@@ -48,7 +48,8 @@ h2 {
     margin: auto;
 }
 
-#buildingImg, #compactorImg {
+#buildingImg,
+#compactorImg {
     width: 100%;
 }
 
@@ -57,7 +58,8 @@ h2 {
     width: 80%;
 }
 
-#contactInfo, #contactForm {
+#contactInfo,
+#contactForm {
     display: inline-block;
     width: 40%;
 }
@@ -71,9 +73,11 @@ h2 {
     color: #ff0000;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
 }
+
 
 /* Position the matter.js canvas */
 
@@ -81,10 +85,9 @@ canvas {
     max-width: 100vw;
     max-height: 75vh;
     margin: auto;
-	display: flex;
+    display: flex;
     top: 0;
 }
-
 
 
 /* 
@@ -135,12 +138,12 @@ Credit to Web Dev Simplified
 }
 
 .modal-header .close-button {
-	font-weight: bold;
+    font-weight: bold;
     cursor: pointer;
     border: none;
     background: none;
     font-size: 1.3rem;
-	outline: none;
+    outline: none;
 }
 
 #overlay {
@@ -160,18 +163,20 @@ Credit to Web Dev Simplified
     pointer-events: all;
 }
 
-#scoreContainer, #livesContainer, #modalBtn {
-	right: 2rem;
-	display: block;
-	position: fixed
+#scoreContainer,
+#livesContainer,
+#modalBtn {
+    right: 2rem;
+    display: block;
+    position: fixed
 }
 
 #scoreContainer {
-	top: 7rem;
+    top: 7rem;
 }
 
 #modalBtn {
-	top: 10rem;
+    top: 10rem;
     background-color: #ff0000;
     border-radius: 5px;
     text-decoration: none;
@@ -187,10 +192,10 @@ Credit to Web Dev Simplified
 }
 
 #objective {
-	display: block;
-	margin: 0;
-	font-size: 1.2rem;
-	text-align: center;
+    display: block;
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 #buttons {
@@ -207,6 +212,17 @@ Credit to Web Dev Simplified
     left: 5px;
     bottom: 0;
     font-size: 5rem;
+}
+
+#spawnBtn i {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-select: none;
+    -ms-touch-action: none;
 }
 
 #resetBtn {
@@ -249,15 +265,16 @@ i:hover {
 }
 
 ul {
-	list-style-type: disc;
+    list-style-type: disc;
 }
 
 ul li {
-	display: list-item;
-	margin-left: 1rem;
+    display: list-item;
+    margin-left: 1rem;
 }
 
-a, #formSubmit {
+a,
+#formSubmit {
     background-color: #ff0000;
     border-radius: 5px;
     text-decoration: none;
@@ -275,16 +292,20 @@ a:hover {
     background-color: #d82b2b;
 }
 
+
 /* Media queries */
 
 @media only screen and (max-width: 900px) {
-    #spawnBtn, #resetBtn, #compactBtn {
+    #spawnBtn,
+    #resetBtn,
+    #compactBtn {
         font-size: 2.5rem;
     }
 }
 
 @media only screen and (max-width: 720px) {
-    #contactInfo, #contactForm {
+    #contactInfo,
+    #contactForm {
         display: block;
         width: 100%;
     }
@@ -294,7 +315,6 @@ a:hover {
     canvas {
         width: inherit;
     }
-
     #statsContainer {
         display: block;
         left: 50%;
@@ -305,37 +325,32 @@ a:hover {
         white-space: nowrap;
         text-align: center;
     }
-
     #livesContainer {
         bottom: 30vh;
     }
-    
     #scoreContainer {
         top: inherit;
         bottom: 25vh;
     }
-
     #modalBtn {
         top: inherit;
         bottom: 13vh;
     }
-
-    #spawnBtn, #resetBtn, #compactBtn {
+    #spawnBtn,
+    #resetBtn,
+    #compactBtn {
         font-size: 2.5rem;
     }
-
     header ul {
         padding: 0;
         display: block;
         color: blue;
     }
-
     #winLose {
         top: 20%;
         left: 15%;
         font-size: 1rem;
     }
-
     .modal {
         white-space: normal;
         text-align: left;
@@ -347,30 +362,25 @@ a:hover {
     #livesContainer {
         bottom: 47vh;
     }
-    
     #scoreContainer {
         top: inherit;
         bottom: 40vh;
     }
-
     #modalBtn {
         top: inherit;
         bottom: 25vh;
     }
-
     .modal ul {
         font-size: .75rem;
     }
-
     #objective {
         font-size: 1rem;
     }
-
     .modal-header .title {
         font-size: 1rem;
     }
-
-    #contactInfo, #contactForm {
+    #contactInfo,
+    #contactForm {
         font-size: 1rem;
     }
 }
@@ -380,15 +390,12 @@ a:hover {
         padding: 10px;
         font-size: 1rem;
     }
-    
     .modal ul {
         font-size: .75rem;
     }
-
     #objective {
         font-size: 1rem;
     }
-
     .modal-header .title {
         font-size: 1rem;
     }
@@ -410,7 +417,6 @@ a:hover {
     #winLose {
         font-size: .75rem;
     }
-
     a {
         padding: 10px;
     }

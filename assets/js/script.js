@@ -350,6 +350,17 @@ $('#resetBtn').on('click', function() {
     window.location.reload();
 });
 
+function preventLongPressMenu(node) {
+    node.on('touchstart', absorbEvent_);
+    node.on('touchmove', absorbEvent_);
+    node.on('touchend', absorbEvent_);
+    node.on('touchcancel', absorbEvent_);
+}
+
+function init() {
+    preventLongPressMenu($('#spawnBtn'));
+}
+
 // Create mouse/click dragging function to world objects
 let mouse = Mouse.create(render.canvas),
     mouseConstraint = MouseConstraint.create(engine, {
