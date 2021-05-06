@@ -34,6 +34,20 @@ header ul li {
 	display: inline-block;
 }
 
+h2 {
+    font-size: 1rem;
+}
+
+#homeBody {
+    width: 80vw;
+    margin: auto;
+}
+
+#buildingImg, #compactorImg {
+    width: 100%;
+}
+
+
 /* Position the matter.js canvas */
 
 canvas {
@@ -215,10 +229,6 @@ ul {
 ul li {
 	display: list-item;
 	margin-left: 1rem;
-}
-
-h2 {
-    font-size: 2vw;
 }
 
 a {
