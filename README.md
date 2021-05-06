@@ -198,6 +198,7 @@ This project is an interactive game built on the 2d physics engine matter.js. It
 * Modal: https://www.youtube.com/watch?v=MBaw_6cPmAw
 
 ### Acknowledgments
+* [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) for the instruction modal.
 * [Stackoverflow](https://stackoverflow.com/) as a resource for learning and troubleshooting.
 * [Matter.js documentation](https://brm.io/matter-js/docs/)
 * [The coding train YouTube channel](https://www.youtube.com/user/shiffman/)
