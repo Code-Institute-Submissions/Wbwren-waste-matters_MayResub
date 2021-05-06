@@ -14,10 +14,15 @@ body {
 
 nav {
     float: left;
+    position: relative;
 }
 
 nav a {
     background-color: #14151F;
+}
+
+nav ul {
+    padding: 0;
 }
 
 li {
@@ -46,7 +51,6 @@ h2 {
 #buildingImg, #compactorImg {
     width: 100%;
 }
-
 
 /* Position the matter.js canvas */
 
@@ -244,6 +248,9 @@ a:hover {
     background-color: #ffffff;
 }
 
+.selectedNav {
+    background-color: #d82b2b;
+}
 
 /* Media queries */
 
