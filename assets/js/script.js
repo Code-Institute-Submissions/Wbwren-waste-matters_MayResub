@@ -337,6 +337,22 @@ function update() {
     }
 }
 
+$('#spawnBtn').on('touchstart', function () {
+    down();
+});
+
+$('#spawnBtn').on('touchend', function () {
+    up();
+});
+
+$('#spawnBtn').on('mousedown', function () {
+    down();
+});
+
+$('#spawnBtn').on('mouseup', function () {
+    up();
+});
+
 function down() {
     value = 0;
     interval = setInterval(update, 100);
