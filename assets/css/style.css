@@ -52,6 +52,25 @@ h2 {
     width: 100%;
 }
 
+#contactMain {
+    margin: auto;
+    width: 80%;
+}
+
+#contactInfo, #contactForm {
+    display: inline-block;
+    width: 40%;
+}
+
+#contactInfo {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contactInfo i {
+    color: #ff0000;
+}
+
 /* Position the matter.js canvas */
 
 canvas {
@@ -257,6 +276,13 @@ a:hover {
 @media only screen and (max-width: 900px) {
     #spawnBtn, #resetBtn, #compactBtn {
         font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    #contactInfo, #contactForm {
+        display: block;
+        width: 100%;
     }
 }
 
