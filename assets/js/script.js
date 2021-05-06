@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 // Module aliases
 const Engine = Matter.Engine,
     MouseConstraint = Matter.MouseConstraint,
@@ -22,41 +23,41 @@ const render = Render.create({
 
 // User instruction modal
 // Credit to Web Dev Simplified
-const openModalButtons = document.querySelectorAll('[data-modal-target]')
-const closeModalButtons = document.querySelectorAll('[data-close-button]')
-const overlay = document.getElementById('overlay')
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById('overlay');
 
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const modal = document.querySelector(button.dataset.modalTarget)
-        openModal(modal)
-    })
-})
+        const modal = document.querySelector(button.dataset.modalTarget);
+        openModal(modal);
+    });
+});
 
 overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.modal.active')
+    const modals = document.querySelectorAll('.modal.active');
     modals.forEach(modal => {
-        closeModal(modal)
-    })
-})
+        closeModal(modal);
+    });
+});
 
 closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const modal = button.closest('.modal')
-        closeModal(modal)
-    })
-})
+        const modal = button.closest('.modal');
+        closeModal(modal);
+    });
+});
 
 function openModal(modal) {
-    if (modal == null) return
-    modal.classList.add('active')
-    overlay.classList.add('active')
+    if (modal == null) return;
+    modal.classList.add('active');
+    overlay.classList.add('active');
 }
 
 function closeModal(modal) {
-    if (modal == null) return
-    modal.classList.remove('active')
-    overlay.classList.remove('active')
+    if (modal == null) return;
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
 }
 
 // Create the ground
@@ -203,7 +204,7 @@ let greenPipe = Bodies.rectangle(480, 0, 0.01, 0.01, {
 });
 
 
-let polystyreneBoxes = []
+let polystyreneBoxes = [];
     // Function to generate random sized polystyrene blocks
 function spawnBlock() {
     /* 
@@ -259,19 +260,18 @@ function spawnBlock() {
 
     World.remove(engine.world, [greenPipe, brick2, brick3, brick4, brick5]);
 
-    polystyreneBoxes.push(polystyreneBox)
-};
+    polystyreneBoxes.push(polystyreneBox);}
 
-let boxesOutOfBounds = new Set()
+let boxesOutOfBounds = new Set();
 
 // Detect collisions and check if block is out of bounds
 checkCoordinates = () => {
-    for (i in polystyreneBoxes) {
+    for (let i in polystyreneBoxes) {
         if (polystyreneBoxes[i].position.x < 420) {
-            boxesOutOfBounds.add(polystyreneBoxes[i].id)
+            boxesOutOfBounds.add(polystyreneBoxes[i].id);
         } else if (polystyreneBoxes[i].position.x > 551) {
-            one = true
-            boxesOutOfBounds.add(polystyreneBoxes[i].id)
+            one = true;
+            boxesOutOfBounds.add(polystyreneBoxes[i].id);
         }
     }
 };
@@ -279,13 +279,13 @@ checkCoordinates = () => {
 let lives = 3;
 checkLives = () => {
     if (boxesOutOfBounds.size == 1) {
-        lives = 2
+        lives = 2;
     } else if (boxesOutOfBounds.size == 2) {
-        lives = 1
+        lives = 1;
     } else if (boxesOutOfBounds.size >= 3) {
-        lives = 0
+        lives = 0;
     }
-}
+};
 
 lifeLost = () => {
     if (lives == 2) {
@@ -293,32 +293,32 @@ lifeLost = () => {
             `
 			Lives: <i class="fas fa-heart"></i> <i class="fas fa-heart"></i>
 			`
-        )
+        );
     } else if (lives == 1) {
         $('#livesContainer').html(
             `
 			Lives: <i class="fas fa-heart"></i>
 			`
-        )
+        );
     } else if (lives == 0) {
         $('#livesContainer').html(
             `
 			Lives:
 			`
-        )
-        $('#winLose').css('display', 'inline-block')
-        $('#spawnBtn').css('display', 'none')
-        $('#compactBtn').css('display', 'none')
+        );
+        $('#winLose').css('display', 'inline-block');
+        $('#spawnBtn').css('display', 'none');
+        $('#compactBtn').css('display', 'none');
     }
-}
+};
 
 // Call coordinate and life checker functions every second
 setInterval(function() { checkCoordinates(), checkLives(), lifeLost(); }, 1000);
 
-let score = 0
+let score = 0;
 
 function incrementScore() {
-    score++
+    score++;
     $('#scoreContainer').html(
         `
     Score: ${score}
@@ -332,8 +332,8 @@ let interval;
 function update() {
     value++;
     if (value % 2 == 0) {
-        spawnBlock()
-        incrementScore()
+        spawnBlock();
+        incrementScore();
     }
 }
 
@@ -465,25 +465,25 @@ let compactorForeground = Bodies.rectangle(400, 471, 0.01, 0.01, {
 let lengthValue;
 determineQuantityCompacted = () => {
     if (score == 0) {
-        lengthValue = 0
+        lengthValue = 0;
     } else if (score < 5) {
-        lengthValue = 25
+        lengthValue = 25;
     } else if (score < 10) {
-        lengthValue = 50
+        lengthValue = 50;
     } else if (score < 15) {
-        lengthValue = 75
+        lengthValue = 75;
     } else if (score < 20) {
-        lengthValue = 100
+        lengthValue = 100;
     } else if (score > 25) {
-        lengthValue = 125
+        lengthValue = 125;
     } else if (score > 30) {
-        lengthValue = 150
+        lengthValue = 150;
     } else if (score > 35) {
-        lengthValue = 175
+        lengthValue = 175;
     } else if (score >= 40) {
-        lengthValue = 200
+        lengthValue = 200;
     }
-}
+};
 
 makeCompactedPolystyrene = () => {
     compactedPolystyrene = Bodies.rectangle(320, 490, lengthValue, 15, {
@@ -503,16 +503,16 @@ makeCompactedPolystyrene = () => {
         isStatic: false
 
     });
-}
+};
 
 // Function to turn on compactor
 $('#compactBtn').on('click', function() {
-    determineQuantityCompacted()
+    determineQuantityCompacted();
     World.remove(engine.world, [
         groundCenter, trapDoorComponent, rightTrapDoor, leftTrapDoor,
         mouseConstraint
     ]);
-    makeCompactedPolystyrene()
+    makeCompactedPolystyrene();
     World.add(engine.world, [compactedPolystyrene, compactorForeground]);
     Body.setVelocity(compactedPolystyrene, { x: -2.7, y: 0 });
 
@@ -521,14 +521,14 @@ $('#compactBtn').on('click', function() {
             `
 			<div>Score: ${score}</div>
 			`
-        ).css({ 'display': 'inline-block' })
+        ).css({ 'display': 'inline-block' });
     } else if (score > 0) {
         $('#winLose').html(
             `
 			<div>Success!<br>Score: ${score}<br><br><a href="contact.html">Contact us</a>
             </div>
 			`
-        ).css({ 'display': 'inline-block' })
+        ).css({ 'display': 'inline-block' });
     }
     $('#spawnBtn').css('pointer-events', 'none');
     $('#compactBtn').css('pointer-events', 'none');
