@@ -214,6 +214,9 @@ Credit to Web Dev Simplified
     font-size: 5rem;
 }
 
+
+/* Allow spawn btn to work on touch screen devices */
+
 #spawnBtn i {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
